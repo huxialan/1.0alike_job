@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登录注册</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/log_reg.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" style="margin: auto 0!important;">
+        <div class="col-md-offset-2 col-sm-offset-1 col-lg-4 col-md-5 col-sm-6 col-xs-12 logr">
+            <div class="panel lr_panel">
+                <ul id="myTab" class="nav nav-tabs" style="margin-top:-1px;">
+                    <li class="active col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center"><a href="#hlogin" data-toggle="tab"><h3>登录</h3></a></li>
+                    <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center"><a href="#hregist" data-toggle="tab"><h3>注册</h3></a></li>
+                </ul>
+
+                <div class="panel-body">
+                    <div id="myTabContent" class="tab-content">
+                        <!--登录-->
+                        <div class="tab-pane fade in active" id="hlogin">
+                            <div class="regHeader text-left" >
+                                <small> <span>如有账号，请登录</span></small>
+                            </div>
+                            <div class="f_main">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="inputPhonenumber" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">登录名：</label>
+                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 reg_in">
+                                            <input type="text" class="form-control" id="inputPhonenumber" required="required" placeholder="请输入手机号/用户名">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">密码：</label>
+                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 reg_in">
+                                            <input type="password" class="form-control" id="inputPassword" required="required" placeholder="请输入密码">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="inputAuthcode" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">验证码：</label>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 reg_in" style="padding-right:10px ">
+                                            <input type="text" class="form-control" id="inputAuthcode" required="required" placeholder="验证码">
+                                        </div>
+                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="padding: 0">
+                                            <div id="yzm_text"></div>
+                                            <a href="javascript:" id="change_yzm" style="position:relative;display: inline-block"><small>换一张</small></a>
+                                        </div>
+                                        <div class="check_loginR" id="check_yzm"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="text-center">
+                                            <div class="checkbox">
+                                                <label style="margin-left: -40px">
+                                                    <input type="checkbox" style="width: 1em;height: 1em"><small>记住密码</small>
+                                                    <small style="position: relative;left:5em;"><a href="./forget_pass.html">忘记密码？</a></small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="text-center">
+                                            <button type="submit" class="btn Headerbtn"  id="login_header" style="margin-top:-1em">登&nbsp;&nbsp;&nbsp;录</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="top">您还可以通过以下方式直接登录</div>
+                                        <div class="foot">
+                                            <a href="#"><img class="weibo" src="assets/images/index/weibo.png"/></a>
+                                            <a href="#"><img class="qq" src="assets/images/index/qq.png"/></a>
+                                            <a href="#"><img class="wechat" src="assets/images/index/wechat.png"/></a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!--注册-->
+                        <div class="tab-pane fade" id="hregist">
+                            <div class="regHeader text-left" >
+                                <small> <span>欢迎注册</span></small>
+                            </div>
+                            <div class="f_main">
+                                <form class="form-horizontal" action="#" method="post" name="myForm_reg" id="myForm_reg">
+                                    <div class="form-group">
+                                        <label for="inputuname" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">登录名：</label>
+                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 reg_in">
+                                            <input type="text" name="unamea" class="form-control" id="inputuname" placeholder="请输入手机号">
+                                        </div>
+                                        <div class="check_loginR row" id="check_phone"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="getcode" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">验证码：</label>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 reg_in" style="padding-right:10px ">
+                                            <input type="text" class="form-control" id="getcode" placeholder="验证码">
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5" style="padding-left: 0">
+                                            <button type="button" id="getcode_btn" class="getcode_btn">获取短信验证码</button>
+                                        </div>
+                                        <div class="row check_loginR row" id="check_gcode"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputnickname" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">昵称：</label>
+                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 reg_in">
+                                            <input type="password" name="upassa" class="form-control" id="inputnickname" placeholder="请输入昵称">
+                                        </div>
+                                        <div class="check_loginR row" id="check_nickname"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassworda" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">密码：</label>
+                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 reg_in">
+                                            <input type="password" name="upassa" class="form-control" id="inputPassworda" placeholder="由6-20位字母，数字和符号组成">
+                                        </div>
+                                        <div class="check_loginR row" id="check_pass"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPasswordaa" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label" style="padding-left:0">确认密码：</label>
+                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 reg_in">
+                                            <input type="password" name="upassal" class="form-control" id="inputPasswordaa" placeholder="请再次输入上面的密码">
+                                        </div>
+                                        <div class="check_loginR row" id="check_passa"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="text-center">
+                                            <button type="button" class="btn Headerbtn" id="">注&nbsp;&nbsp;&nbsp;册</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="text-center">
+                                            <div class="checkbox" >
+                                                <label>
+                                                    <input type="checkbox" name="checkboxPro"  id="checkboxpro" checked="checked" style="width: 1em;height: 1em">
+                                                    <small style="color: #666;">我已阅读并接受<a href="#">《吻合用户协议》</a></small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--页脚信息-->
+    <div class="x_footer">
+        <div class="footer_list">
+            <ul>
+                <li><a href="">关于我们</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">网站帮助</a></li>
+                <li><a href="">版权信息</a></li>
+            </ul>
+        </div>
+        <p>Copyright©  吻合  2002-2016 , All  Rights  Reserved  京ICP证041501号  海淀分局备案编号 1101082227</p>
+    </div>
+
+</div>
+<script src="assets/js/jquery-2.2.2.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $('#yzm_text').html('<span>s</span>' +
+            '<span>5</span>' +
+            '<span>h</span>' +
+            '<span>9</span>');
+</script>
+
+</body>
+</html>

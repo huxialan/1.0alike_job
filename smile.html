@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="smile">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>每日一笑</title>
+    <link rel="shortcut icon" href="slogo.png" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./assets/Font-Awesome-master/css/font-awesome.css"/>
+    <link rel="stylesheet" href="./assets/css/common.css"/>
+    <link rel="stylesheet" href="./assets/css/header.css"/>
+    <link rel="stylesheet" href="./assets/css/inner.css"/>
+</head>
+<body>
+<div class="container-fluid" >
+    <!--导航栏-->
+    <header>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="hx_nav row">
+            <div class="hx_nav_head col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                <div class="navbar-header">
+                    <a class="navbar-brand head_logo" href="./index.html">
+                        <img src="assets/images/logo.png"/>
+                    </a>
+                    <span class="hx-dropdown" title="切换城市">
+                             <a href="#">
+                                <span id="location" style="background-color: transparent!important;">[切换城市]</span>
+                                <b class="caret" style="color: #fff"></b>
+                            </a>
+                            <span class="hx-menu">
+                                <div id="city_hx">
+                                    <select class="prov"></select>
+                                    <select class="city" disabled="disabled"></select>
+                                </div>
+                                <button class="btn btn-danger procityf" style="margin-left: 30px">取消</button>
+                                <button type="button" class="btn btn-info procityt">确定</button>
+                            </span>
+                        </span>
+                </div>
+            </div>
+            <div class="hx_nav_divs_divs">
+                <ul>
+                    <li class="user_pic"><a href="./log_reg.html"><img src="assets/images/index/user1.png"/><span class="log_reg">登录|注册</span></a></li>
+                    <li class="in_message"><a href="./message.html"><i class="fa fa-envelope-o"></i><sup style="padding: 1px 4px;font-size:10px;background-color: #f63e31;border-radius:100%">8</sup></a></li>
+                    <li class="settingl"><a href="./setting.html"><i class="fa fa-gear"></i>设置</a></li>
+                </ul>
+            </div>
+            <div class="hx_nav_divs col-lg-offset-1 col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html" style="width: 70px;">首页</a></li>
+                    <li><a href="./hot_topic.html">热点话题</a></li>
+                    <li><a href="subpages/inners_all.html">社会心理</a></li>
+                    <li><a href="./f_talk.html">好友说说</a></li>
+                    <li><a href="./plazza.html">校园广场</a></li>
+                    <li><a class="cur" href="#">每日一笑</a></li>
+                    <li class="settings"><a href="./setting.html" style="width: 70px;">设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+    <!--导航栏-->
+    <div class="row hx_mid">
+        <div class="col-md-offset-1 col-sm-offset-1 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+            <!--每日一笑-->
+            <div class="inner_row">
+                <div class="row dytalk_row">
+                    <div class="inner_row_pldys">
+                        <!--笑话top-->
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                                <a href="#"><img src="assets/images/talk/upic.jpg" class="pldy_userp_m"/></a>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8" style="padding-top: 5px;">
+                                <div class="pldy_usern_m"><a href="#" target="_blank"><span>李一</span><span class="hx_degree">lv2</span></a></div>
+                                <div class="pldy_usert_m"><span>2小时45分之前</span><span><i class="fa fa-eye"></i>&nbsp; 浏览（109）</span></div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding: 0">
+                                <div class="smile_delete">删&nbsp;除</div>
+                            </div>
+                        </div>
+                        <!--笑话内容-->
+                        <div class="row">
+                            <div class="col-md-offset-1 col-sm-offset-2 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                               <div class="smile_topic"><a href="subpages/smile_de.html">没想到你是这样的男朋友 </a></div>
+                                <div class="smile_pic">
+                                    <img src="assets/images/smile/sm1.gif"/>
+                                </div>
+                                <div class="pldy_contenttext">
+                                   呵呵，会被打死的，，，
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--笑话点赞分享评论-->
+                        <div class="row smilezan_row">
+                            <div class=" col-lg-2 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/smile/s_smile0.png" class="smile_sm_img"  id="smile_sm_imgf" onclick="smileSm()"/>&nbsp; <span id="smile_sm_countf">21</span></div>
+                            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/smile/s_baba.png" class="smile_baba_img"  id="smile_baba_imgf" onclick="smileSmba()"/>&nbsp; <span id="smile_baba_countf">21</span></div>
+                            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3"><a href="#" id="inner_row_smilecomment_btn"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                        </div>
+                       <div class="inner_row_pldycomment" id="inner_row_smilecomment">
+                            <div class="talk_comment_upic">
+                                <p><a href="#"><img src="assets/images/talk/up2.jpeg"/><span class="talk_comment_upic_a">abc&nbsp;:</span></a>
+                                <span class="talk_comment_upic_time">2小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                <div class="talk_comment_upic_con">哇咔咔，哇咔咔，哇咔咔，果然套路深，，，</div>
+                                 </p>
+                                <p><a href="#"><img src="assets/images/talk/upic.jpg"/><span class="talk_comment_upic_a">123</span></a><span class="talk_comment_upic_a">&nbsp;回复&nbsp;</span><a href="#" class="talk_comment_upic_a">abc&nbsp;:</a>
+                                <span class="talk_comment_upic_time">1小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                <div class="talk_comment_upic_con">这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。</div>
+                                </p>
+                                <p>
+                                    <a href="#"><img src="assets/images/talk/up2.jpeg"/>
+                                        <span class="talk_comment_upic_a">abc</span>
+                                    </a>
+                                    <span class="talk_comment_upic_a">&nbsp;回复&nbsp;</span>
+                                    <a href="#" class="talk_comment_upic_a">123&nbsp;:</a>
+                                    <span class="talk_comment_upic_time">20分钟之前
+                                        <button class="btn btn-link" onfocus="this.blur()">
+                                            <i class="fa fa-commenting"></i>
+                                        </button>
+                                    </span>
+                                    <div class="talk_comment_upic_con">哈哈，么么哒</div>
+                                </p>
+                            </div>
+                            <div class="talk_comment_subpub">
+                                <div class="talk_comment_subpubvis" id="talk_comment_subpubvisid"><div>来说点什么吧。。。</div><i class="fa fa-camera"></i></div>
+                                <div class="talk_comment_subpubhide" id="talk_comment_subpubhideid">
+                                    <div class="row">
+                                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10"><textarea placeholder="来说点什么吧。。。" class="form-control"></textarea></div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><i class="fa fa-camera"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-smile-o"></i></button>
+                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-at"></i></button>
+                                        <button type="button" class="btn btn-danger pl_talkcom_publish" onfocus="this.blur()">发表</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row dytalk_row">
+                    <div class="inner_row_pldys">
+                        <!--笑话top-->
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                                <a href="#"><img src="assets/images/talk/up2.jpeg" class="pldy_userp_m"/></a>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8" style="padding-top: 5px;">
+                                <div class="pldy_usern_m"><a href="#" target="_blank"><span>萌萌哒</span><span class="hx_degree">lv2</span></a></div>
+                                <div class="pldy_usert_m"><span>2小时45分之前</span><span><i class="fa fa-eye"></i>&nbsp; 浏览（109）</span></div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding: 0">
+                                <div class="smile_focus">+ 关注</div>
+                            </div>
+                        </div>
+                        <!--笑话内容-->
+                        <div class="row">
+                            <div class="col-md-offset-1 col-sm-offset-2 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                <div class="smile_topic"><a href="subpages/smile_de.html">没想到你是这样的男朋友 </a></div>
+                                <div class="smile_pic">
+                                    <img src="assets/images/smile/sm1.gif"/>
+                                </div>
+                                <div class="pldy_contenttext">
+                                    呵呵，会被打死的，，，
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--笑话点赞分享评论-->
+                        <div class="row smilezan_row">
+                            <div class=" col-lg-2 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/smile/s_smile0.png" class="smile_sm_img" onclick="smileSm()"/>&nbsp; <span>21</span></div>
+                            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/smile/s_baba.png" class="smile_baba_img"  onclick="smileSmba()"/>&nbsp; <span>21</span></div>
+                            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                        </div>
+                        <div class="inner_row_pldycomment">
+                            <div class="talk_comment_upic">
+                                <p><a href="#"><img src="assets/images/talk/up2.jpeg"/><span class="talk_comment_upic_a">abc&nbsp;:</span></a>
+                                    <span class="talk_comment_upic_time">2小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                <div class="talk_comment_upic_con">哇咔咔，哇咔咔，哇咔咔，果然套路深，，，</div>
+                                </p>
+                                <p><a href="#"><img src="assets/images/talk/upic.jpg"/><span class="talk_comment_upic_a">123</span></a><span class="talk_comment_upic_a">&nbsp;回复&nbsp;</span><a href="#" class="talk_comment_upic_a">abc&nbsp;:</a>
+                                    <span class="talk_comment_upic_time">1小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                <div class="talk_comment_upic_con">这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。</div>
+                                </p>
+                                <p>
+                                    <a href="#"><img src="assets/images/talk/up2.jpeg"/>
+                                        <span class="talk_comment_upic_a">abc</span>
+                                    </a>
+                                    <span class="talk_comment_upic_a">&nbsp;回复&nbsp;</span>
+                                    <a href="#" class="talk_comment_upic_a">123&nbsp;:</a>
+                                    <span class="talk_comment_upic_time">20分钟之前
+                                        <button class="btn btn-link" onfocus="this.blur()">
+                                            <i class="fa fa-commenting"></i>
+                                        </button>
+                                    </span>
+                                <div class="talk_comment_upic_con">哈哈，么么哒</div>
+                                </p>
+                            </div>
+                            <div class="talk_comment_subpub">
+                                <div class="talk_comment_subpubvis"><div>来说点什么吧。。。</div><i class="fa fa-camera"></i></div>
+                                <div class="talk_comment_subpubhide">
+                                    <div class="row">
+                                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10"><textarea placeholder="来说点什么吧。。。" class="form-control"></textarea></div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><i class="fa fa-camera"></i></div>
+                                    </div>
+                                    <div class="row">
+                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-smile-o"></i></button>
+                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-at"></i></button>
+                                        <button type="button" class="btn btn-danger pl_talkcom_publish" onfocus="this.blur()">发表</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hx_mid_right">
+            <div class="hx_mid_right_search">
+                <input type="search" class="form-control" placeholder="搜索"/>
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="hx_mid_smile_pub text-center">
+                <a href="subpages/smileday_pub.html"> 发布笑话<i class="fa fa-paper-plane-o"></i></a>
+            </div>
+            <div>
+                <h4>热门笑话</h4>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-right: 5px">
+                        <a href="#"> <img src="./assets/images/inner/inner_arf.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left:5px;">
+                        <a href="#"> <img src="./assets/images/inner/inners_ars.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:10px;padding-right: 10px;padding-top: 15px">
+                        <a href="#"><img src="./assets/images/inner/inners_art.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>好友推荐</h4>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-right: 5px">
+                        <a href="#"><img src="./assets/images/inner/inner_arf.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left:5px;">
+                        <a href="#"><img src="./assets/images/inner/inners_ars.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:10px;padding-right: 10px;padding-top: 15px">
+                        <a href="#"> <img src="./assets/images/inner/inners_art.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>猜你喜欢</h4>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-right: 5px">
+                        <a href="#"><img src="./assets/images/inner/inner_arf.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left:5px;">
+                        <a href="#"><img src="./assets/images/inner/inners_ars.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:10px;padding-right: 10px;padding-top: 15px">
+                        <a href="#"> <img src="./assets/images/inner/inners_art.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--页脚信息-->
+    <div class="x_footer">
+        <div class="footer_list">
+            <ul>
+                <li><a href="">网站帮助</a></li>
+                <li><a href="">版权信息</a></li>
+                <li><a href="">广告业务</a></li>
+            </ul>
+        </div>
+        <p>Copyright©  吻合  2002-2016 , All  Rights  Reserved  京ICP证041501号  海淀分局备案编号 1101082227</p>
+    </div>
+</div>
+
+<script src="./assets/js/jquery-2.2.2.min.js"></script>
+<script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./assets/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=45lPXDQF4aKW00LpM2xqp1qfSpd3B9ae"></script>  <!--百度地图api--->
+<script>
+    $(function () {
+        $('#myModal').modal('hide');
+
+        // 百度地图API功能   todo
+        var map = new BMap.Map("location");//地图所属容器
+        var myCity = new BMap.LocalCity();
+        myCity.get(function(result){
+            var cityName = result.name;
+            map.setCenter(cityName);
+            $('#location').html(cityName);
+//            $('#change_location').html('[<a href="#">切换城市</a>]');
+        });
+
+        $("#city_hx").citySelect({
+            prov:"北京",
+            city:"朝阳区"
+        });
+
+
+    });
+    var c=0;
+    $('.hx-dropdown>a').click(function () {
+        if(c==0){
+            $('.hx-menu').css('display','block');
+//            $('.hx-dropdown span').style.zIndex="999";
+            c=1;
+        }else{
+            $('.hx-menu').css('display','none');
+            c=0;
+        }
+    });
+    $('.procityf').click(function () {
+        $('.hx-menu').css('display','none');
+    });
+    $('.procityt').click(function (){
+//        alert($('.prov').val());
+        $('#location').html($('.city').val());
+        $('.hx-menu').css('display','none');
+    });
+//    点赞
+    var a=0;
+    function smileSm(){
+        var zan_sm=$("#smile_sm_countf").text();
+        if(a==0){
+            $("#smile_sm_imgf")[0].src="assets/images/smile/s_smile1.png";
+            $("#smile_sm_countf").html(zan_sm*1+1);
+            a=1;
+        }else {
+            $("#smile_sm_imgf")[0].src="assets/images/smile/s_smile0.png";
+            $("#smile_sm_countf").html(zan_sm*1-1);
+            a=0;
+        }
+    }
+    var ba=0;
+    function smileSmba(){
+        var zan_ba=$("#smile_baba_countf").text();
+        if(ba==0){
+            $("#smile_baba_imgf")[0].src="assets/images/smile/s_baba1.png";
+            $("#smile_baba_countf").html(zan_ba*1+1);
+            ba=1;
+        }else {
+            $("#smile_baba_imgf")[0].src="assets/images/smile/s_baba.png";
+            $("#smile_baba_countf").html(zan_ba*1-1);
+            ba=0;
+        }
+    }
+//    评论
+    $('#inner_row_smilecomment_btn').click(function (){
+//        $('#talk_comment_subpubvisid').css('display','none');
+        $('#inner_row_smilecomment').toggle();
+        $('#talk_comment_subpubhideid textarea').focus();
+    });
+
+    $('.talk_comment_upic_time button').click(function (){
+        $('#talk_comment_subpubvisid').css('display','none');
+        $('#talk_comment_subpubhideid').css('display','block');
+        $('#talk_comment_subpubhideid textarea').focus();
+    });
+    $('#talk_comment_subpubvisid').click(function (){
+        $('#talk_comment_subpubvisid').css('display','none');
+        $('#talk_comment_subpubhideid').css('display','block');
+        $('#talk_comment_subpubhideid textarea').focus();
+    });
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="index">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <!--<meta http-equiv=X-UA-Compatible content=IE=EmulateIE7>-->
+    <title>首页</title>
+    <link rel="shortcut icon" href="slogo.png" />
+    <link rel="stylesheet" href="assets/Font-Awesome-master/css/font-awesome.css"/>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/common.css"/>
+    <link rel="stylesheet" href="assets/css/header.css"/>
+    <link rel="stylesheet" href="assets/css/jquery.pagewalkthrough.css"/>
+    <style>
+        #walkthrough-content{display:none}
+        #walkthrough-content h3{height:30px; line-height:30px}
+        #walkthrough-content p{line-height:28px}
+    </style>
+</head>
+<body>
+<div class="container-fluid" >
+    <!--导航栏-->
+    <header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="hx_nav row">
+                <div class="hx_nav_head col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="navbar-header">
+                        <a class="navbar-brand head_logo" id="hx_navbar-header" href="./index.html">
+                            <img src="assets/images/logo.png"/>
+                        </a>
+                        <span class="hx-dropdown" title="切换城市">
+                             <a href="#">
+                                <span id="location" style="background-color: transparent!important;">[切换城市]</span>
+                                <b class="caret" style="color: #fff"></b>
+                            </a>
+                            <span class="hx-menu">
+                                <div id="city_hx">
+                                    <select class="prov"></select>
+                                    <select class="city" disabled="disabled"></select>
+                                </div>
+                                <button class="btn btn-danger procityf" style="margin-left: 30px">取消</button>
+                                <button type="button" class="btn btn-info procityt">确定</button>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="hx_nav_divs_divs">
+                    <ul>
+                        <li class="user_pic">
+                            <a href="./log_reg.html">
+                                <img src="assets/images/index/user1.png" class="head_upic"/>
+                                <div class="log_reg">
+                                    <a href="./log_reg.html">登录</a>
+                                    <span style="color:#fff">|</span>
+                                    <a href="./log_reg.html#hregist">注册</a>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="in_message"><a href="./message.html"><i class="fa fa-envelope-o"></i><sup style="padding: 1px 4px;font-size:10px;background-color: #f63e31;border-radius:100%">8</sup></a></li>
+                        <li class="settingl"><a href="./setting.html"><i class="fa fa-gear"></i>设置</a></li>
+                    </ul>
+                </div>
+                <div class="hx_nav_divs col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                    <ul class="nav navbar-nav">
+                        <li><a class="cur" href="#" style="width: 70px;">首页</a></li>
+                        <li><a href="./hot_topic.html">热点话题</a></li>
+                        <li id="inners_all"><a href="subpages/inners_all.html">社会心理</a></li>
+                        <li><a href="./f_talk.html">好友说说</a></li>
+                        <li><a href="./plazza.html">校园广场</a></li>
+                        <li><a href="./smile.html">每日一笑</a></li>
+                        <li class="settings"><a href="./setting.html" style="width: 70px;">设置</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--导航栏-->
+
+    <div id="walkthrough-content">
+        <div id="walkthrough-1">
+            <h3>111</h3>
+            <p>页面功能介绍引导页的效果Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augu</p>
+        </div>
+
+        <div id="walkthrough-2">
+            这里是网站LOGO，点击这里可以直通网站首页。
+        </div>
+
+        <div id="walkthrough-3">
+            点击这里也可以看哟。
+        </div>
+
+        <div id="walkthrough-4">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis augue a neque cursus ac blandit orci faucibus. Phasellus nec metus purus.</p>
+        </div>
+
+       <!-- <div id="walkthrough-5">
+            这是页脚和版权信息。
+        </div>-->
+    </div>
+    <!--导航栏-->
+    <div class="row carousel_row" style="margin-bottom: 20px;">
+        <div class="col-md-offset-1 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+            <div id="carousel-example-generic" class="carousel slide carousel-example-generic" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active center">
+                        <a href="./subpages/hot_de.html" target="_blank">
+                          <img src="assets/images/index/ikb.jpg" alt="...">
+                        <div class="carousel-caption">
+                           科比谢幕：献给那些年我们一起追过的科神
+                        </div></a>
+                    </div>
+                    <div class="item center">
+                        <a href="#"><img src="assets/images/index/ifyh.jpg" alt="...">
+                        <div class="carousel-caption">傅园慧尖叫+乐疯:我用了洪荒之力!</div></a>
+                    </div>
+                    <div class="item center">
+                        <a href="#"> <img src="assets/images/index/ijd.jpg" alt="...">
+                        <div class="carousel-caption">绝地逃亡票房突破5亿</div></a>
+                    </div>
+                    <div class="item center">
+                        <a href="#"> <img src="assets/images/index/igirls.jpg" alt="...">
+                        <div class="carousel-caption">
+                            2016香港小姐20强诞生她们长这样
+                        </div></a>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <div class="iuserimg">
+                <div>
+                    <a href="./mypage.html"><img src="assets/images/talk/upic.jpg" class="img-circle"/></a>
+                    <!--<div class="text-center">亲，你还没有登录哦~<br>快来&nbsp;<a href="./log_reg.html">登录</a>&nbsp;吧！</div>-->
+                        <div class="text-center iuserimg_logh">
+                            <a href="#">萌萌哒&nbsp;&nbsp;<span>lv4</span></a>
+                            <p>杭州师范大学仓前校区</p>
+                        </div>
+
+                </div>
+            </div>
+            <div class="iuserapp" id="iuserapp"><a href="#">寻找志同道合者</a></div>
+        </div>
+    </div>
+    <div class="row in_his">
+        <div class="col-md-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-12">
+            <div class="row in_his_row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <a href="./subpages/hot_de.html" target="_blank">
+                            <img src="assets/images/index/pax.jpg" alt="川普（特普朗）和希拉里谁会赢？"/>
+                            <span class="in_his_row_he"><img src="assets/images/hot/shot.png"/>&nbsp;&nbsp;热点话题</span>
+                            <div class="caption">
+                                <h4>川普（特普朗）和希拉里谁会赢？特朗普为什么叫川普？</h4>
+                                <p><span>2016-06-14</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <a href="subpages/inners_loves_de.html">
+                            <img src="assets/images/inner/innerf.jpg" alt="亲密关系测试：你们的亲密程度有多高？"/>
+                            <span class="in_his_row_he"><img src="assets/images/index/sinner.png"/>&nbsp;&nbsp;心理测试</span>
+                            <div class="caption">
+                                <h4>亲密关系测试：你们的亲密程度有多高？</h4>
+                                <p><span>2016-10-10</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <a href="subpages/smile_de.html">
+                            <img src="assets/images/smile/ss.jpg" alt="谁喝了厕所里的水已经很明显了"/>
+                            <span class="in_his_row_he"><img src="assets/images/index/ssmile.png"/>&nbsp;&nbsp;每日一笑</span>
+                            <div class="caption">
+                                <h4>谁喝了厕所里的水已经很明显了</h4>
+                                <p><span>2016-10-10</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="assets/images/smile/sf.gif" alt="汪星人遇见椰子蟹"/>
+                            <span class="in_his_row_he"><img src="assets/images/index/ssmile.png"/>&nbsp;&nbsp;每日一笑</span>
+                            <div class="caption">
+                                <h4>汪星人遇见椰子蟹</h4>
+                                <p><span>2016-10-10</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    <!--热点话题-->
+    <div class="row in_his">
+        <div class="col-md-offset-1 col-lg-10 col-md-10 col-sm-offset-1 col-sm-10 col-xs-12">
+            <div class="in_hissec">
+                <div class="in_his_hottop"><a href="hot_topic.html"><h3><img src="assets/images/hot/shot.png" style="background-color: #00a0ea"/>&nbsp;&nbsp;热点话题</h3></a><hr></div>
+                <div class="row in_his_row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="./subpages/hot_de.html" target="_blank">
+                                <img src="assets/images/index/pax.jpg" alt="川普（特普朗）和希拉里谁会赢？"/>
+                                <div class="caption">
+                                    <h4>川普（特普朗）和希拉里谁会赢？特朗普为什么叫川普？</h4>
+                                    <p><span>2016-06-14</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="assets/images/index/pax.jpg" alt="川普（特普朗）和希拉里谁会赢？"/>
+                                <div class="caption">
+                                    <h4>川普（特普朗）和希拉里谁会赢？特朗普为什么叫川普？</h4>
+                                    <p><span>2016-06-14</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="assets/images/index/pax.jpg" alt="川普（特普朗）和希拉里谁会赢？"/>
+                                <div class="caption">
+                                    <h4>川普（特普朗）和希拉里谁会赢？特朗普为什么叫川普？</h4>
+                                    <p><span>2016-06-14</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="./subpages/hot_de.html" target="_blank">
+                                <img src="assets/images/index/pax.jpg" alt="川普（特普朗）和希拉里谁会赢？"/>
+                                <div class="caption">
+                                    <h4>川普（特普朗）和希拉里谁会赢？特朗普为什么叫川普？</h4>
+                                    <p><span>2016-06-14</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--社会心理-->
+    <div class="row in_his_inner">
+        <div class="col-md-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-12">
+            <div class="in_hissec_inner">
+                <div class="in_his_innertop"><a href="subpages/inners_all.html"><h3><img src="assets/images/index/sinner.png" style="background-color: #00a0ea"/>&nbsp;&nbsp;社会心理</h3></a><hr></div>
+                <div class="row in_his_row_inner">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="thumbnail row">
+                            <a href="subpages/inners_loves_de.html">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumbnail_img"><img src="assets/images/inner/innerf.jpg" alt="亲密关系测试：你们的亲密程度有多高？"/></div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 caption">
+                                    <h4>亲密关系测试：你们的亲密程度有多高？</h4>
+                                    <p><span>2016-06-14</span></p>
+                                    <p><img src="assets/images/inner/testusers.png"/>&nbsp;已有&nbsp;<span style="color: #00a0ea">1356</span>&nbsp;人测试</p>
+                                    <p><img src="assets/images/inner/testture.png"/>&nbsp;有&nbsp;<span style="color: #00a0ea">1006</span>&nbsp;认为准确</p>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="thumbnail row">
+                            <a href="#">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumbnail_img"><img src="assets/images/inner/inners.jpg" alt="你正在成为你想成为的人吗？"/></div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 caption">
+                                    <h4>你正在成为你想成为的人吗？</h4>
+                                    <p><span>2016-06-14</span></p>
+                                    <p><img src="assets/images/inner/testusers.png"/>&nbsp;已有&nbsp;<span style="color: #00a0ea">1356</span>&nbsp;人测试</p>
+                                    <p><img src="assets/images/inner/testture.png"/>&nbsp;有&nbsp;<span style="color: #00a0ea">1006</span>&nbsp;认为准确</p>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row in_his_row_inner">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="thumbnail row">
+                            <a href="#">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumbnail_img"><img src="assets/images/inner/innerf.jpg" alt="亲密关系测试：你们的亲密程度有多高？"/></div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 caption">
+                                    <h4>亲密关系测试：你们的亲密程度有多高？</h4>
+                                    <p><span>2016-06-14</span></p>
+                                    <p><img src="assets/images/inner/testusers.png"/>&nbsp;已有&nbsp;<span style="color: #00a0ea">1356</span>&nbsp;人测试</p>
+                                    <p><img src="assets/images/inner/testture.png"/>&nbsp;有&nbsp;<span style="color: #00a0ea">1006</span>&nbsp;认为准确</p>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="thumbnail row">
+                            <a href="#">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumbnail_img"><img src="assets/images/inner/inners.jpg" alt="你正在成为你想成为的人吗？"/></div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 caption">
+                                    <h4>你正在成为你想成为的人吗？</h4>
+                                    <p><span>2016-06-14</span></p>
+                                    <p><img src="assets/images/inner/testusers.png"/>&nbsp;已有&nbsp;<span style="color: #00a0ea">1356</span>&nbsp;人测试</p>
+                                    <p><img src="assets/images/inner/testture.png"/>&nbsp;有&nbsp;<span style="color: #00a0ea">1006</span>&nbsp;认为准确</p>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--每日一笑-->
+    <div class="row in_his">
+        <div class="col-md-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-12">
+            <div class="in_hissec">
+                <div class="in_his_smiletop"><a href="smile.html"><h3><img src="assets/images/index/ssmile.png" style="background-color: #00a0ea"/>&nbsp;&nbsp;每日一笑</h3></a><hr></div>
+                <div class="row in_his_row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="subpages/smile_de.html">
+                                <img src="assets/images/smile/sfo.gif" alt="遭雷劈"/>
+                                <div class="caption">
+                                    <h4>川普（特普朗）和希拉里谁会赢？特朗普为什么叫川普？</h4>
+                                    <p><span>2016-06-14</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="assets/images/smile/sfi.jpg" alt="你特么早说啊"/>
+                                <div class="caption">
+                                    <h4>你特么早说啊</h4>
+                                    <p><span>2016-06-14</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="assets/images/smile/ssi.gif" alt="谁都别想好"/>
+                                <div class="caption">
+                                    <h4>让你拍，，，</h4>
+                                    <p><span>2016-06-14</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="assets/images/smile/sse.gif" alt="考后众生相"/>
+                                <div class="caption">
+                                    <h4>考后众生相：月儿弯弯照九州，几家欢乐几家愁</h4>
+                                    <p><span>2016-06-14</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--页脚信息-->
+    <div class="x_footer">
+        <div class="footer_list">
+            <ul>
+                <li><a href="">网站帮助</a></li>
+                <li><a href="">版权信息</a></li>
+                <li><a href="">广告业务</a></li>
+            </ul>
+        </div>
+        <p>Copyright©  吻合  2002-2016 , All  Rights  Reserved  京ICP证041501号  海淀分局备案编号 1101082227</p>
+    </div>
+</div>
+<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<script src="assets/js/jquery-2.2.2.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/hammer.js/2.0.8/hammer.js"></script>
+<script type="text/javascript" src="assets/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="assets/js/jquery.pagewalkthrough.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=45lPXDQF4aKW00LpM2xqp1qfSpd3B9ae"></script>  <!--百度地图api--->
+<!--<script src="assets/js/index.js"></script>-->
+<script>
+    $(function() {
+        // Set up tour
+        $('body').pagewalkthrough({
+            name: 'introduction',
+            steps: [{
+                popup: {
+                    content: '#walkthrough-1',
+                    type: 'modal'
+                }
+            }, {
+                wrapper: '#hx_navbar-header',
+                popup: {
+                    content: '#walkthrough-2',
+                    type: 'tooltip',
+                    position: 'bottom'
+                }
+            }, {
+                wrapper: '#iuserapp',
+                popup: {
+                    content: '#walkthrough-3',
+                    type: 'tooltip',
+                    position: 'left'
+                }
+            }, {
+                wrapper: '#inners_all',
+                popup: {
+                    content: '#walkthrough-4',
+                    type: 'tooltip',
+                    position: 'bottom'
+                }
+            }]
+        });
+
+        // Show the tour
+//        $('body').pagewalkthrough('show');
+    });
+</script>
+<script>
+    $(function(){
+        var myElement= document.getElementById('carousel-example-generic');
+        var hm=new Hammer(myElement);
+        hm.on("swipeleft",function(){
+            $('#carousel-example-generic').carousel('next')
+        });
+        hm.on("swiperight",function(){
+            $('#carousel-example-generic').carousel('prev')
+        })
+    });
+    $(function () {
+        $('#myModal').modal('hide');
+
+        // 百度地图API功能   todo
+        var map = new BMap.Map("location");//地图所属容器
+        var myCity = new BMap.LocalCity();
+        myCity.get(function(result){
+            var cityName = result.name;
+            map.setCenter(cityName);
+            $('#location').html(cityName);
+//            $('#change_location').html('[<a href="#">切换城市</a>]');
+        });
+
+        $("#city_hx").citySelect({
+            prov:"北京",
+            city:"朝阳区"
+        });
+    });
+     var c=0;
+    $('.hx-dropdown>a').click(function () {
+        if(c==0){
+            $('.hx-menu').css('display','block');
+//            $('.hx-dropdown span').style.zIndex="999";
+            c=1;
+        }else{
+            $('.hx-menu').css('display','none');
+            c=0;
+        }
+    });
+    $('.procityf').click(function () {
+        $('.hx-menu').css('display','none');
+    });
+    $('.procityt').click(function (){
+//        alert($('.prov').val());
+        $('#location').html($('.city').val());
+        $('.hx-menu').css('display','none');
+    });
+
+</script>
+</body>
+</html>

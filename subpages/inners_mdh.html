@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="inners_mbti">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>M_D_H测试</title>
+    <link rel="shortcut icon" href="../slogo.png" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../assets/Font-Awesome-master/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../assets/css/common.css"/>
+    <link rel="stylesheet" href="../assets/css/header.css"/>
+    <link rel="stylesheet" href="../assets/css/inner.css"/>
+</head>
+<body>
+<div class="container-fluid " >
+    <!--导航栏-->
+    <!--&gt;768px-->
+    <header  class="inners inners_lg">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="hx_nav row">
+                <div class="hx_nav_head col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                    <div class="navbar-header">
+                        <a class="navbar-brand head_logo" href="../index.html">
+                            <img src="../assets/images/logo.png"/>
+                        </a>
+                        <span class="hx-dropdown" title="切换城市">
+                             <a href="#">
+                                <span id="location" style="background-color: transparent!important;">[切换城市]</span>
+                                <b class="caret" style="color: #fff"></b>
+                            </a>
+                            <span class="hx-menu">
+                                <div id="city_hx">
+                                    <select class="prov"></select>
+                                    <select class="city" disabled="disabled"></select>
+                                </div>
+                                <button class="btn btn-danger procityf" style="margin-left: 30px">取消</button>
+                                <button type="button" class="btn btn-info procityt">确定</button>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="hx_nav_divs_divs">
+                    <ul>
+                        <li class="user_pic"><a href="../log_reg.html"><img src="../assets/images/index/user1.png"/><span class="log_reg">登录|注册</span></a></li>
+                        <li class="in_message"><a href="../message.html"><i class="fa fa-envelope-o"></i><sup style="padding: 1px 4px;font-size:10px;background-color: #f63e31;border-radius:100%">8</sup></a></li>
+                        <li class="settingl"><a href="../setting.html"><i class="fa fa-gear"></i>设置</a></li>
+                    </ul>
+                </div>
+                <div class="hx_nav_divs col-lg-offset-1 col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html" style="width: 70px;">首页</a></li>
+                        <li><a href="../hot_topic.html">热点话题</a></li>
+                        <li><a class="cur" href="./inners_all.html">社会心理</a></li>
+                        <li><a href="../f_talk.html">好友说说</a></li>
+                        <li><a href="../plazza.html">校园广场</a></li>
+                        <li><a href="../smile.html">每日一笑</a></li>
+                        <li class="settings"><a href="../setting.html" style="width: 70px;">设置</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- < 768px-->
+    <header class="inners inners_xs">
+        <nav class="navbar" role="navigation">
+            <div class="hx_nav_head_xs">
+                <div class="hx_nav_head_xs_fir">
+                    <a href="../index.html"><i class="fa fa-angle-left fa-2x"></i></a>
+                </div>
+                <div class="hx_nav_head_xs_sec">
+                    <a href="#">社会心理</a>
+                </div>
+                <div class="hx_nav_head_xs_thi">
+                    <a href="../search.html"> <i class="fa fa-search"></i></a>
+                </div>
+            </div>
+            <div class="hx_nav_divs_inner">
+                <ul class="navbar-nav_in">
+                    <li><a href="./inners_all.html">热点</a></li>
+                    <li><a href="./inners_love.html">爱情</a></li>
+                    <li><a href="./inners_character.html">性格</a></li>
+                    <li><a href="./inners_ability.html">能力</a></li>
+                    <li><a href="./inners_occupation.html">职业</a></li>
+                    <li><a href="./inners_subconscious.html">潜意识</a></li>
+                    <li class="cur"><a href="#">职业性格</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--导航栏-->
+    <div class="row hx_mid">
+        <div class="col-md-offset-1 col-lg-7 col-md-7 col-sm-offset-1 col-sm-7 col-xs-12">
+            <ul class="nav nav-pills nav-justified innerhx_nav innersall_nav">
+                <li><a href="inners_all.html"><img src="../assets/images/inner/socialinner.PNG"></a></li>
+                <li><a href="inners_love.html">爱情测试</a></li>
+                <li><a href="inners_character.html">性格测试</a></li>
+                <li><a href="inners_ability.html">能力测试</a></li>
+                <li><a href="inners_occupation.html">职业测试</a></li>
+                <li><a href="inners_subconscious.html">潜意识测试</a></li>
+                <li class="hxactive"><a href="#">职业性格</a></li>
+            </ul>
+
+            <div class="inner_mdh">
+                <div class="inner_mdh_mbti">
+                    <h4>MBTI第一步</h4>
+                    <p>
+                        MBTI是一种迫选型、自我报告式的性格评估理论模型，用以衡量和描述人们在获取信息、作出决策、对待生活等方面的心理活动规律和性格类型。通过MBTI模型，性格和职业之间的联系得到了比较清晰地阐释。MBTI有长达70多年的实践以及广泛的职业常模数据。
+                    </p>
+                    <div class="text-center">
+                        <a href="inners_mbti.html" class="btn btn-info">了解并测试</a>
+                    </div>
+                </div>
+
+                <div class="inner_mdh_mbtis">
+                    <h4>MBTI第二步</h4>
+                    <p>
+                        实际上，我们大多数人总会存在一些模糊和未知的维度。而MBTI第一步的结果描述是针对极其典型性格类型的描述——所以常出现MBTI第一步的分析结果中有和受测者不甚相符的地方。 鉴于此，佛罗里达大学心理类型应用中心（CAPT）1978年将MBTI升级到量表K，开发出“MBTI第二步”（StepⅡ），把每个维度进一步细分为5个子维度，如外向又细分为Initiating(主动提出)，Expressive(擅于表达)，Gregarious(合群)，Active(活跃)，Enthusiastic(热情)五个子维度，内向又细分为Receiving(被动接受)，Contained(内敛)，Intimate(寻求亲密)，Reflective(内省) ，Quiet(沉静)五个子维度。通过复杂的计算机计分程序产生结果——“扩展解释报告”（EIR）——大大提升了性格类型评估的精度和深度。
+                    </p>
+                    <div class="text-center">
+                        <a href="inners_mbti_sec.html" class="btn btn-info">了解并测试</a>
+                    </div>
+                </div>
+
+                <div class="inner_mdh_disc">
+                    <h4>
+                        DISC初级版
+                    </h4>
+                    <p>
+                        20世纪20年代，美国心理学家威廉.莫尔顿.马斯顿创建了一个理论来解释人的情绪反应，在此之前，这种工作主要局限在对于精神病患者或精神失常人群的研究，而马斯顿博士则希望扩大这个研究范围，以运用于心理健康的普通人群，因此，马斯顿博士将他的理论构建为一个体系，即：The Emotions of Normal People“正常人的情绪”。
+                    </p>
+                    <div class="text-center">
+                        <a href="inners_disc.html" class="btn btn-info">了解并测试</a>
+                    </div>
+                </div>
+
+                <div class="inner_mdh_disc">
+                    <h4>
+                        DISC高级版
+                    </h4>
+                    <p>
+                        DISC完整版报告涵盖了众多直观的因素呈现，比如候选人于团队的正面特征，于团队的价值，应对团队中的冲突、谈判作风、压力状态、如何有效管理、不同职业领域表现预测（管理领域表现预测、技术领域表表现预测、销售领域表现预测、服务领域表现预测）以及发展建议。
+                    </p>
+                    <p>
+                        DISC完整测评系统一共生成三张图形。分别是“外在行为图示”，“内在行为图示”，以及“综合行为图示”。内在“本我”行为：“本我”是个体天生的、固有的行为模式，代表着个体最自然真实的内在动机和欲求。内在行为模式构成了DISC分析表系列的三个基本图形之一。
+                    </p>
+                    <div class="text-center">
+                        <a href="inners_disc_sec.html" class="btn btn-info">了解并测试</a>
+                    </div>
+                </div>
+                <div class="inner_mdh_holl">
+                    <h4>
+                        霍兰德职业兴趣测试
+                    </h4>
+                    <p>
+                        兴趣测验的研究可以追溯到20世纪初，桑代克于1912 年对兴趣和能力的关系进行了探讨。1915年詹穆士发展了一个关于兴趣的问卷，标志着兴趣测验的系统研究的开始。1927年，斯特朗编制了斯特朗职业兴趣调查表，是最早的职业兴趣测验。库德又在1939 年发表了库德爱好调查表。1953年编制了职业偏好量表，并在此基础上发展了自我指导探索（1969），据此提出了“人格特质与工作环境相匹配”的理论（1970）。不难看出，在Holland职业兴趣理论提出之前，关于职业兴趣测试和个体分析是孤立的，Holland将二者有机结合起来。
+                    </p>
+                    <div class="text-center">
+                        <a href="inners_holland.html" class="btn btn-info">了解并测试</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hx_mid_right in_hx_mid_right">
+            <div class="hx_mid_right_search">
+                <input type="search" class="form-control" placeholder="搜索"/>
+                <i class="fa fa-search"></i>
+            </div>
+            <div>
+                <h4>专业推荐</h4>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-right: 5px">
+                       <a href="#">
+                           <img src="../assets/images/inner/inner_arf.jpg" style="width: 100%;height: auto"/>
+                       </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left:5px;">
+                        <a href="#">
+                            <img src="../assets/images/inner/inners_ars.jpg" style="width: 100%;height: auto"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:10px;padding-right: 10px;padding-top: 15px">
+                        <a href="#">
+                            <img src="../assets/images/inner/inners_art.jpg" style="width: 100%;height: auto"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>热门精选测试</h4>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-right: 5px">
+                        <a href="#">
+                            <img src="../assets/images/inner/inner_arf.jpg" style="width: 100%;height: auto"/>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left:5px;">
+                        <a href="#">
+                            <img src="../assets/images/inner/inners_ars.jpg" style="width: 100%;height: auto"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:10px;padding-right: 10px;padding-top: 15px">
+                        <a href="#">
+                            <img src="../assets/images/inner/inners_art.jpg" style="width: 100%;height: auto"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--页脚信息-->
+    <div class="x_footer">
+        <div class="footer_list">
+            <ul>
+                <li><a href="">网站帮助</a></li>
+                <li><a href="">版权信息</a></li>
+                <li><a href="">广告业务</a></li>
+            </ul>
+        </div>
+        <p>Copyright©  吻合  2002-2016 , All  Rights  Reserved  京ICP证041501号  海淀分局备案编号 1101082227</p>
+    </div>
+</div>
+
+<script src="../assets/js/jquery-2.2.2.min.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.cityselect.js"></script>
+<!--百度地图api--->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=45lPXDQF4aKW00LpM2xqp1qfSpd3B9ae"></script>
+<script>
+    $(function () {
+        $('#myModal').modal('hide');
+
+        // 百度地图API功能   todo
+        var map = new BMap.Map("location");//地图所属容器
+        var myCity = new BMap.LocalCity();
+        myCity.get(function(result){
+            var cityName = result.name;
+            map.setCenter(cityName);
+            $('#location').html(cityName);
+//            $('#change_location').html('[<a href="#">切换城市</a>]');
+        });
+
+        $("#city_hx").citySelect({
+            url:"../assets/js/city.min.js",
+            prov:"北京",
+            city:"朝阳区"
+        });
+    });
+
+    $('.hx-dropdown').click(function () {
+        $('.hx-menu').css('display','block');
+        $('.hx-dropdown span').style.zIndex="999";
+
+    });
+    $('.procityt').click(function (){
+        $('#location').html($('.city').val());
+//        $('.hx-menu').toggle();
+        $('.hx-menu').css('display','none');
+    });
+
+</script>
+</body>
+</html>

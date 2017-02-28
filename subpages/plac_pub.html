@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" class="plactivity_pub">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>活动发布</title>
+    <link rel="shortcut icon" href="../slogo.png" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-datetimepicker.css"/>
+    <link rel="stylesheet" href="../assets/Font-Awesome-master/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../assets/css/common.css"/>
+    <link rel="stylesheet" href="../assets/css/header.css"/>
+    <link rel="stylesheet" href="../assets/css/inner.css"/>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <!--导航栏-->
+    <header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="hx_nav row">
+                <div class="hx_nav_head col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                    <div class="navbar-header">
+                        <a class="navbar-brand head_logo" href="../index.html">
+                            <img src="../assets/images/logo.png"/>
+                        </a>
+                        <span class="hx-dropdown" title="切换城市">
+                             <a href="#">
+                                <span id="location" style="background-color: transparent!important;">[切换城市]</span>
+                                <b class="caret" style="color: #fff"></b>
+                            </a>
+                            <span class="hx-menu">
+                                <div id="city_hx">
+                                    <select class="prov"></select>
+                                    <select class="city" disabled="disabled"></select>
+                                </div>
+                                <button class="btn btn-danger procityf" style="margin-left: 30px">取消</button>
+                                <button type="button" class="btn btn-info procityt">确定</button>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="hx_nav_divs_divs">
+                    <ul>
+                        <li class="user_pic"><a href="../log_reg.html"><img src="../assets/images/index/user1.png"/><span class="log_reg">登录|注册</span></a></li>
+                        <li class="in_message"><a href="../message.html"><i class="fa fa-envelope-o"></i><sup style="padding: 1px 4px;font-size:10px;background-color: #f63e31;border-radius:100%">8</sup></a></li>
+                        <li class="settingl"><a href="../setting.html"><i class="fa fa-gear"></i>设置</a></li>
+                    </ul>
+                </div>
+                <div class="hx_nav_divs col-lg-offset-1 col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html" style="width: 70px;">首页</a></li>
+                        <li><a href="../hot_topic.html">热点话题</a></li>
+                        <li><a href="./inners_all.html">社会心理</a></li>
+                        <li><a href="../f_talk.html">好友说说</a></li>
+                        <li><a href="../plazza.html">校园广场</a></li>
+                        <li><a href="../smile.html">每日一笑</a></li>
+                        <li class="settings"><a href="../setting.html" style="width: 70px;">设置</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--导航栏-->
+    <div class="row hx_mid">
+        <div class="col-md-offset-1 col-sm-offset-1 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+            <div class="inner_row">
+                <!--style="padding-right: 0"-->
+                <div class="row placpub_row">
+                    <div><img src="../assets/images/plaza/plac_banner.jpg" style="width: 100%;height: auto"/></div>
+                    <form action="" method="post"><!--enctype="multipart/form-data"-->
+                        <div class="placpub_row_bottom">
+                            <div class="placpub_row_actopic">
+                                <label>活动主题<span class="plpub_start">*</span></label>
+                                <input type="text" placeholder="请输入活动主题" class="form-control"/></div>
+                            <div class="placpub_row_upload"><label>活动海报</label>
+                                <div class="file-box">
+                                    <div id="localImag"><img id="preview"/></div>
+                                    <div><button type="button" class="btn btn-info">浏览图片</button>
+                                        <input type="file" name="file" id="doc" class="file_sig" onchange="javascript:setImagePreview();document.getElementById('textfield').value=this.value;">
+                                        <input type='text' name='textfield' id='textfield' class="form-control textfield_sig"/>
+                                    </div>
+                                    <div class="file_warn">温馨提示：图片尺寸建议为：900*525，图片小于4M</div>
+                                </div>
+                            </div>
+                            <div class="placpub_row_time">
+                                <div><label>活动时间<span class="plpub_start">*</span></label></div>
+                                <div class="row">
+                                    <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 row'>
+                                        <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8" style="display: inline-flex">
+                                            <div class='input-group date plac_pubstart_date' id='plac_pubstart'>
+                                                <input type='text' placeholder="活动开始时间" class="form-control" /><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4 plac_pubstart_div_time">
+                                            <select class="form-control plac_pubstart_time">
+                                                <option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option><option>02:00</option><option>02:30</option><option>03:00</option>
+                                                <option>03:30</option><option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option><option>06:00</option><option>06:30</option>
+                                                <option>07:00</option><option>07:30</option><option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option><option>10:00</option>
+                                                <option>10:30</option><option>11:00</option><option>11:30</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+                                                <option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option><option>16:00</option><option>16:30</option><option>17:00</option>
+                                                <option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option>
+                                                <option>21:00</option><option>21:30</option><option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option>
+                                            </select>
+                                            <!--<span class="input-group-addon "><span class="glyphicon glyphicon-time"></span></span>-->
+                                        </div>
+                                    </div>
+                                    <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 row'>
+                                        <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8" style="display: inline-flex">
+                                            <div class='input-group date plac_pubend_date' id='plac_pubend'>
+                                                <input type='text' placeholder="活动结束时间" class="form-control" /><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4 plac_pubend_div_time">
+                                            <select class="form-control plac_pubend_time">
+                                                <option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option><option>02:00</option><option>02:30</option><option>03:00</option>
+                                                <option>03:30</option><option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option><option>06:00</option><option>06:30</option>
+                                                <option>07:00</option><option>07:30</option><option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option><option>10:00</option>
+                                                <option>10:30</option><option>11:00</option><option>11:30</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+                                                <option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option><option>16:00</option><option>16:30</option><option>17:00</option>
+                                                <option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option>
+                                                <option>21:00</option><option>21:30</option><option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="placpub_row_timeend">
+                                <div><label>截止时间<span class="plpub_start">*</span></label></div>
+                                <div class="row">
+                                    <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 row'>
+                                        <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8" style="display: inline-flex">
+                                            <div class='input-group date plac_pubtoend_date' id='plac_pubtoend'>
+                                                <input type='text' class="form-control" placeholder="截止时间"/><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4 plac_pubtoend_div_time">
+                                            <select class="form-control plac_pubtoend_time">
+                                                <option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option><option>02:00</option><option>02:30</option><option>03:00</option>
+                                                <option>03:30</option><option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option><option>06:00</option><option>06:30</option>
+                                                <option>07:00</option><option>07:30</option><option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option><option>10:00</option>
+                                                <option>10:30</option><option>11:00</option><option>11:30</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+                                                <option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option><option>16:00</option><option>16:30</option><option>17:00</option>
+                                                <option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option>
+                                                <option>21:00</option><option>21:30</option><option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option>
+                                            </select>
+                                            <!--<span class="input-group-addon "><span class="glyphicon glyphicon-time"></span></span>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="placpub_row_address">
+                                <div><label>活动地点<span class="plpub_start">*</span></label></div>
+                                <div class="row" style="width:80%;">
+                                    <div class="form-group" id="placpub_row_addcity">
+                                        <select class="prov"></select>
+                                        <select class="city" disabled="disabled"></select>
+                                        <select class="dist" disabled="disabled"></select>
+                                    </div>
+                                    <div style=" margin-left: 15px;"><input type="text" class="form-control" placeholder="请输入具体地址"/></div>
+                                </div><br>
+                            </div>
+                            <div><div><label>活动标签</label></div>
+                                <div class="row" style="width: 100%;margin-top: 5px">
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" placeholder="添加标签"/></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="font-size: 12px;color:#ff7aa7;margin-top: 8px">最多3个标签，用逗号“，”隔开</div>
+                                </div>
+                            </div>
+                            <div><div><label>活动类别</label></div>
+                                <div class="row" style="width: 100%;margin-top: 5px">
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option>篮球</option>
+                                                <option>书法</option>
+                                                <option>舞蹈</option>
+                                                <option>文艺</option>
+                                                <option>辩论</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="placpub_row_detail"><label>活动详情<span class="plpub_start">*</span></label>
+                                <div class="row" style="width:80%;margin:0">
+                                    <div style="margin-top: 20px"><div style="margin: 10px"><img src="../assets/images/my/acintro.png"/>&nbsp;活动简介：</div>
+                                        <div><textarea class="form-control" placeholder="活动简介"></textarea></div>
+                                    </div>
+                                    <div style="margin-top: 20px"><div style="margin: 10px"><img src="../assets/images/my/acprocess.png"/>&nbsp;活动流程：</div> <textarea  class="form-control" placeholder="活动流程"></textarea></div>
+                                    <div style="margin-top: 20px"><div style="margin: 10px"><img src="../assets/images/my/acwarn.png"/>&nbsp;温馨提示：</div> <textarea  class="form-control" placeholder="温馨提示"></textarea></div>
+
+                                </div>
+                            </div>
+                            <!--<div><label>报名费用<span class="plpub_start">*</span></label></div>-->
+                            <div><label>人数上限</label>
+                                <div><input type="text" class="form-control" placeholder="最大人数限制"/></div>
+                            </div>
+                            <div><label style="width: 120px">主办方联系方式</label><div><input type="text" class="form-control"/></div></div>
+                            <div><label style="width: 100px">是否需审核<span class="plpub_start">*</span></label>
+                                <div>
+                                    <label class="checkbox-inline">
+                                        <input type="radio" name="chk_ac" id="plac_chkture" style="margin: 5px" >是
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="radio" name="chk_ac" id="plac_chkfalse" style="margin: 5px" checked>否
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div  style="display: flex; flex-direction: column!important;">
+                                <div class="placpub_row_addcse">
+                                    <div class="form-group row">
+                                        <label for="plpjoin_uname" class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right control-label">姓名：</label>
+                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                            <input type="text" class="form-control" id="plpjoin_uname" placeholder="参与者姓名" disabled="disabled">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="plpjoin_pno" class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right control-label">手机号：</label>
+                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                            <input type="text" class="form-control" id="plpjoin_pno" placeholder="参与者联系方式" disabled="disabled">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="plp_addchoice">
+
+                                        </div>
+                                        <p style="color:#fe90b4;padding-left:15px;padding-top: 10px">添加自定义选项</p>
+                                        <div>
+                                            <button type="button" id="plpac_addsingle_btn" class="btn btn-info">添加单行文本</button>
+                                            <button type="button"  id="plpac_addmore_btn" class="btn btn-info">添加多行文本</button>
+                                            <button type="button" class="btn btn-danger" onclick="del()">删除</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <div class="placpub_row_pub_btn">
+                                <div style="margin: auto;">
+                                <button type="button" class="btn btn-success btn-lg" >保存</button>
+                                <button type="button" class="btn btn-danger btn-lg">发布</button></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hx_mid_right">
+            <div class="spub_mustknow">
+                <h4 style="color:red">发布须知</h4>
+                <p>1. 请各位不要发与笑话无关的内容；</p>
+                <p>2. 涉及政治、色情、暴力、广告等违法违规内容会直接删除；</p>
+                <p>3. 内容中请不要涉及个人隐私；</p>
+                <p>4. 图片请尽量清晰，带水印的图片不会通过；</p>
+                <p>5. 分享你身边的搞笑趣事、搞笑图片、鼓励原创、反对转载；</p>
+                <p>6. 不要重复发帖，会被删除。</p>
+                <p>7. 最多只允许上传3M的图片。</p>
+            </div>
+            <div style="padding:5px">
+                <a href="#"><img src="../assets/images/erweicode.png" style="width: 100%;height: auto;border:solid 1px #ccc; border-radius: 15px"/></a>
+            </div>
+        </div>
+    </div>
+
+    <!--页脚信息-->
+    <div class="x_footer">
+        <div class="footer_list">
+            <ul>
+                <li><a href="">网站帮助</a></li>
+                <li><a href="">版权信息</a></li>
+                <li><a href="">广告业务</a></li>
+            </ul>
+        </div>
+        <p>Copyright©  吻合  2002-2016 , All  Rights  Reserved  京ICP证041501号  海淀分局备案编号 1101082227</p>
+    </div>
+</div>
+
+<script src="../assets/js/jquery-2.2.2.min.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/js/moment-with-locales.js"></script>
+<script src="../assets/bootstrap/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=45lPXDQF4aKW00LpM2xqp1qfSpd3B9ae"></script>  <!--百度地图api--->
+<script>
+    $(function () {
+        $('#myModal').modal('hide');
+
+        // 百度地图API功能   todo
+        var map = new BMap.Map("location");//地图所属容器
+        var myCity = new BMap.LocalCity();
+        myCity.get(function(result){
+            var cityName = result.name;
+            map.setCenter(cityName);
+            $('#location').html(cityName);
+//            $('#change_location').html('[<a href="#">切换城市</a>]');
+        });
+        $("#city_hx").citySelect({
+            url:"../assets/js/city.min.js",
+            prov:"北京",
+            city:"朝阳区"
+        });
+        $("#placpub_row_addcity").citySelect({
+            url:"../assets/js/city.min.js",
+            prov:"北京",
+            nodata:"none"
+        });
+        //日期
+        $('#plac_pubtoend').datetimepicker({locale: 'zh-cn', format: 'l'});
+        $('#plac_pubstart').datetimepicker({locale: 'zh-cn', format: 'l'});
+        $('#plac_pubend').datetimepicker({locale: 'zh-cn', format: 'l'});
+        $("#plac_pubstart").on("dp.change",function (e) {
+            $('#plac_pubend').data("DateTimePicker").minDate(e.date);
+        });
+        $("#plac_pubend").on("dp.change",function (e) {
+            $('#plac_pubstart').data("DateTimePicker").maxDate(e.date);
+        });
+       /* $("#plac_pubtoend").on("dp.change",function (e) {
+            $('#plac_pubend').data("DateTimePicker").minDate(e.date);
+        });*/
+
+    });
+
+    $('.hx-dropdown').click(function () {
+        $('.hx-menu').css('display','block');
+        $('.hx-dropdown span').style.zIndex="999";
+
+    });
+    $('.procityt').click(function (){
+        $('#location').html($('.city').val());
+//        $('.hx-menu').toggle();
+        $('.hx-menu').css('display','none');
+    });
+    //下面用于图片上传预览功能
+    function setImagePreview(avalue) {
+        var docObj=document.getElementById("doc");
+        var imgObjPreview=document.getElementById("preview");
+        if(docObj.files && docObj.files[0])
+        {
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '272px';
+            imgObjPreview.style.height = '160px';
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+        } else {
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+            var localImagId = document.getElementById("localImag");
+//必须设置初始大小
+            localImagId.style.width = "272px";
+            localImagId.style.height = "160px";
+//图片异常的捕捉，防止用户修改后缀来伪造图片
+            try{
+                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            } catch(e) {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+
+//是否审核
+    $('#plac_chkture').click(function () {
+        if( $('#plac_chkture')[0].checked == true){
+            $(".placpub_row_addcse").css('display','block');
+        }
+    });
+    $('#plac_chkfalse').click(function () {
+        if( $('#plac_chkfalse')[0].checked == true) {
+            $(".placpub_row_addcse").css('display', 'none');
+        }
+    });
+
+//    添加自定义选项
+    $('#plpac_addsingle_btn').click(function () {
+        var adds='<div class="form-group row">' +
+                '<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center"><input type="checkbox" name="chk_addsm"/></div>' +
+                '<div class="col-lg-9 col-md-9 col-sm-9 col-xs-10">' +
+                '<input type="text" class="form-control" placeholder="单行文本"></div></div>';
+        $('.plp_addchoice').append(adds);
+    });
+    $('#plpac_addmore_btn').click(function () {
+        var adds='<div class="form-group row">' +
+                '<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center"><input type="checkbox" name="chk_addsm"/></div>' +
+                '<div class="col-lg-9 col-md-9 col-sm-9 col-xs-10">' +
+                '<textarea class="form-control" placeholder="多行文本" style="resize: none;"></textarea></div></div>';
+        $('.plp_addchoice').append(adds);
+    });
+    //        删除
+    function del(){
+        var input=document.getElementsByName("chk_addsm");
+        for(var i=input.length-1; i>=0;i--) {
+            if (input[i].checked == true) {
+                var a = input[i].parentNode;
+                var b = a.parentNode;
+                var c = b.parentNode;
+                //移除子节点
+                c.removeChild(b);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

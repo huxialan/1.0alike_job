@@ -1,0 +1,402 @@
+header{
+    background-color: #353535;
+}
+.navbar-default{
+    background-color: #353535;
+    border: none!important;
+    border-radius: 0!important;
+    position: relative;
+    z-index: 999!important;
+}
+.navbar-default .hx_nav.row{
+    margin: 0!important;
+    padding: 0;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+}
+.hx_nav_head{
+    padding: 0;
+}
+
+.hx_nav_head .navbar-header a.navbar-brand{
+    color: #12b6fd;
+}
+
+/*城市*/
+.hx-dropdown{
+    position: relative;
+    top:20px;
+    width:90px!important;
+}
+.hx-dropdown a{
+    text-decoration: none;
+    width:90px!important;
+}
+#location{
+    font-size: 12px;
+    width:90px!important;
+    color: #FFF!important;
+    background-color: transparent!important;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+.hx-menu{
+    display: none;
+    width:180px;height: 100px;
+    position: absolute;
+    top:17px;
+    left:-5px;
+    z-index:999!important;
+    /*min-width: 160px;*/
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+#city_hx{
+    padding: 15px 10px;
+    margin: auto;
+}
+/*中间导航首页----每日一笑*/
+.hx_nav_divs ul.navbar-nav li a{
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+}
+.hx_nav_divs ul.navbar-nav li a:hover{
+    color:#12b6fd !important;
+}
+/*登录，消息，设置*/
+.hx_nav_divs_divs ul{
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    padding-left: 15px!important;
+    margin-bottom: 0!important;
+}
+.hx_nav_divs_divs ul li{
+    margin-right: 15px;
+}
+.hx_nav_divs_divs ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+li.user_pic .head_upic{
+    width: 32px;
+    height:32px;
+    border-radius: 100%;
+}
+
+/*.hx_nav_divs_divs ul li:last-child{
+    margin-right: 5px!important;
+}*/
+.in_message a i{
+    font-size: 18px!important;
+    color:#fff;
+}
+li.in_message a{
+    display: inline-block;
+}
+@media ( min-width:1120px){
+    .hx_nav_divs_divs{
+        position:absolute;
+        right: 40px!important;
+        z-index: 99;
+    }
+}
+@media screen and (min-width: 768px) and ( max-width: 1120px){
+    .hx_nav_divs_divs{
+        position:absolute;
+        right: 10px;
+        z-index: 99;
+    }
+}
+@media ( min-width: 768px){
+    /*170216*/
+    .hx_nav_head{
+        margin-left: 8%;
+    }
+    /*logo*/
+    .navbar-brand.head_logo{
+        padding-top: 0!important;
+    }
+    .head_logo img{
+       width: 100%;
+    }
+    /*170216*/
+
+    header.inners .navbar{
+        margin-bottom: 0!important;
+    }
+    .navbar-default{
+        padding-top: 20px!important;
+    }
+    .navbar-default .hx_nav_divs .navbar-nav {
+        padding-top: 10px;
+        display: inline-block;
+        /*border: #07abf7 solid 1px;*/
+    }
+    .settings{
+        display: none!important;
+    }
+    .settingl{
+        display:block!important;
+    }
+    .cur{
+        color:#12b6fd !important;
+        border-bottom:5px solid #12b6fd;
+    }
+    li.user_pic{
+        display:flex;flex-direction: row;
+        position: relative;/*170228*/
+    }
+    li.user_pic .head_upic{
+        margin-right: 3px;
+        margin-top: -5px;
+    }
+    .log_reg{
+        font-size: 12px!important;
+    }
+    /*170228*/
+    .log_reg_sec{
+        display: none;
+    }
+    .ftup_dm{
+        display: none;
+        position: absolute;
+        top:25px;
+        left:20px;
+        background-color: #fff;
+        box-shadow: 0 0 2px 1px #cccccc;
+    }
+    .ftup_dm ul{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+    .ftup_dm ul li{
+        margin-right: 0!important;
+        border-bottom:solid 2px transparent;
+    }
+    .ftup_dm ul li a{
+         font-size: 12px;
+        font-weight: 600;
+        margin: 0!important;
+        color:#333;
+     }
+    .ftup_dm ul li:hover{
+         border-bottom:solid 2px #12b6fd;
+     }
+    li.user_pic:hover .ftup_dm{
+        display: block;
+    }
+    /*170228---完*/
+    /*心理测试*/
+    .inners_lg{
+        display:block;
+    }
+    .inners_xs{
+        display:none;
+    }
+}
+@media ( max-width: 767px){
+    /*logo*//*170216*/
+    .navbar-brand.head_logo{
+        padding-top:8px!important;
+    }
+    .head_logo img{
+        margin-left: 20%;
+        width:80%;
+    }
+    /*170216  完*/
+    .hx_nav_head{
+        border-bottom:1px solid #07abf7;
+        display: flex;
+        flex-direction: row;
+        padding:5px 10px;
+    }
+    .hx_nav_head .navbar-header{
+        /*170216*/
+        width: 60%;
+        min-width: 160px;
+        margin:auto!important;
+    }
+    .hx_nav_head .navbar-header .navbar-brand{
+        padding-left: 5px!important;
+        padding-right: 8px!important;
+    }
+    .log_reg{
+        display: none!important;
+    }
+    li.user_pic{
+        position:absolute;
+        top:10px;
+        left: 10px;
+        /*170228*/
+        display: flex;
+        flex-direction: row!important;
+      }
+    /*170228*/
+    .log_reg_sec{
+        display:block;
+        font-size: 12px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .ftup_dm{
+        display: none!important;
+    }
+    /*170228 完*/
+    li.in_message{
+        position:absolute;
+        top:13px;
+        right: 5px;
+    }
+    .settings{
+        display:block!important;
+    }
+    .settingl{
+        display:none!important;
+    }
+    .cur{
+        border-bottom:3px solid #12b6fd;
+    }
+    .cur>a{
+        color:#12b6fd!important;
+    }
+    .navbar-default .hx_nav_divs{
+        padding: 0!important;
+        margin-top: -30px!important;
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x:scroll;
+    }
+
+    /*社会心理 19*/
+    .hx_nav_head_xs{
+        border-bottom:1px solid #07abf7;
+        display: flex;
+        flex-direction: row;
+        padding:10px 15px;
+        position: relative;
+    }
+    .inners_lg{
+        display:none;
+    }
+    .inners_xs{
+        display:block;
+    }
+    .inners_xs .navbar{
+        border:none!important;
+    }
+    .hx_nav_head_xs_fir a{
+        font-size: 16px;
+        color: #12b6fd;
+        text-decoration: none;
+    }
+    /*社会心理标题*/
+    .hx_nav_head_xs_sec{
+        flex: 4;
+        text-align: center;
+    }
+    .hx_nav_head_xs_sec a{
+        position: relative;
+        top: 5px;
+        font-size: 18px;
+        color: #12b6fd;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    /*社会心理标题---搜索20*/
+    .hx_nav_head_xs_thi{
+        float: right;
+        padding-top: 5px;
+    }
+    .hx_nav_head_xs_thi a{
+        font-size: 18px;
+        color: #12b6fd;
+        text-decoration: none;
+    }
+    .hx_nav_head_xs_thi a>i{
+        font-size: 18px;
+        color: #12b6fd;
+    }
+
+    .hx_nav_divs_inner{
+        width: 100%;
+    }
+    .hx_nav_divs_inner ul.navbar-nav_in{
+        display: flex;
+        flex-direction: row;
+        list-style: none!important;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        padding-left:0!important;
+        margin-bottom: 0!important;
+    }
+    .hx_nav_divs_inner .navbar-nav_in li{
+        flex:1;
+        padding-top: 10px!important;
+        padding-bottom: 5px!important;
+        text-align: center!important;
+    }
+    .hx_nav_divs_inner ul.navbar-nav_in li>a{
+        padding-left: 5px;
+        padding-right: 5px;
+        /*border:red solid 1px;*/
+        /*height: 40px;*/
+        font-size: 14px;
+        color:#fff;
+        font-weight: 600;
+        text-decoration: none;
+        outline: none;
+        line-height: 22px;
+    }
+    .hx_nav_divs_inner ul.navbar-nav_in li>a:hover{
+        color:#12b6fd !important;
+}
+    /*社会心理 ----完19*/
+
+
+
+
+    /*隐藏滚动条*/
+    .navbar-default .hx_nav_divs::-webkit-scrollbar {
+        height:0!important;
+    }
+    .navbar-default .hx_nav_divs ul.navbar-nav{
+        display: inline-flex!important;
+        flex-direction: row!important;
+        margin:0 auto!important;
+    }
+    .navbar-default .hx_nav_divs .navbar-nav li a{
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+        text-decoration: none;
+        outline: none;
+        text-align: center;
+        float: left;
+        line-height: 22px;
+    }
+    header .navbar {
+        margin-bottom: 0!important;
+    }
+}
+

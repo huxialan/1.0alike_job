@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>手机号绑定</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/log_reg.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" style="margin: auto 0!important;">
+        <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-1 col-lg-6 col-md-6 col-sm-6 col-xs-12 bp_div">
+
+            <form class="form-horizontal bp_form">
+                <div class="form-group">
+                    <label for="inputPhonenumber" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">手机号：</label>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 reg_in">
+                        <input type="text" class="form-control" id="inputPhonenumber" required="required" placeholder="请输入手机号">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAuthcode" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">验证码：</label>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3 reg_in" style="padding-right:10px ">
+                        <input type="text" class="form-control" id="inputAuthcode" required="required">
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6" style="padding: 0">
+                        <button class="btn btn-success">免费获取短信验证码</button>
+                     </div>
+                    <div class="check_loginR" id="check_yzm"></div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">密码：</label>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 reg_in">
+                        <input type="password" class="form-control" id="inputPassword" required="required" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPasswordold" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right control-label">确认密码：</label>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 reg_in">
+                        <input type="password" class="form-control" id="inputPasswordold" required="required" placeholder="请再次输入密码">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="text-center" style="margin-top:65px">
+                        <button type="submit" class="btn Headerbtn"  id="login_header" style="margin-top:-1em">下&nbsp;一&nbsp;步</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+
+    <!--页脚信息-->
+    <div class="x_footer">
+        <div class="footer_list">
+            <ul>
+                <li><a href="">关于我们</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">网站帮助</a></li>
+                <li><a href="">版权信息</a></li>
+            </ul>
+        </div>
+        <p>Copyright©  吻合  2002-2016 , All  Rights  Reserved  京ICP证041501号  海淀分局备案编号 1101082227</p>
+    </div>
+
+</div>
+<script src="assets/js/jquery-2.2.2.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

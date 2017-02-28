@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="smileday_pub">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>笑话发布</title>
+    <link rel="shortcut icon" href="../slogo.png" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../assets/Font-Awesome-master/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../assets/css/common.css"/>
+    <link rel="stylesheet" href="../assets/css/header.css"/>
+    <link rel="stylesheet" href="../assets/css/inner.css"/>
+</head>
+<body>
+<div class="container-fluid" >
+    <!--导航栏-->
+    <header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="hx_nav row">
+                <div class="hx_nav_head col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                    <div class="navbar-header">
+                        <a class="navbar-brand head_logo" href="../index.html">
+                            <img src="../assets/images/logo.png"/>
+                        </a>
+                        <span class="hx-dropdown" title="切换城市">
+                             <a href="#">
+                                <span id="location" style="background-color: transparent!important;">[切换城市]</span>
+                                <b class="caret" style="color: #fff"></b>
+                            </a>
+                            <span class="hx-menu">
+                                <div id="city_hx">
+                                    <select class="prov"></select>
+                                    <select class="city" disabled="disabled"></select>
+                                </div>
+                                <button class="btn btn-danger procityf" style="margin-left: 30px">取消</button>
+                                <button type="button" class="btn btn-info procityt">确定</button>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="hx_nav_divs_divs">
+                    <ul>
+                        <li class="user_pic"><a href="../log_reg.html"><img src="../assets/images/index/user1.png"/><span class="log_reg">登录|注册</span></a></li>
+                        <li class="in_message"><a href="../message.html"><i class="fa fa-envelope-o"></i><sup style="padding: 1px 4px;font-size:10px;background-color: #f63e31;border-radius:100%">8</sup></a></li>
+                        <li class="settingl"><a href="../setting.html"><i class="fa fa-gear"></i>设置</a></li>
+                    </ul>
+                </div>
+                <div class="hx_nav_divs col-lg-offset-1 col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html" style="width: 70px;">首页</a></li>
+                        <li><a href="../hot_topic.html">热点话题</a></li>
+                        <li><a href="./inners_all.html">社会心理</a></li>
+                        <li><a href="../f_talk.html">好友说说</a></li>
+                        <li><a href="../plazza.html">校园广场</a></li>
+                        <li><a class="cur" href="../smile.html">每日一笑</a></li>
+                        <li class="settings"><a href="../setting.html" style="width: 70px;">设置</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--导航栏-->
+    <div class="row hx_mid">
+        <div class="col-md-offset-1 col-sm-offset-1 col-lg-7 col-md-7 col-sm-7 col-xs-12">
+            <div class="inner_row"  >
+                <div class="row spub_row">
+                    <form>
+                    <div><img src="../assets/images/smile/smile-banner.jpg" style="width: 100%;height: auto"/></div>
+                    <div  class="spub_row_bottom">
+                        <div><input type="text" placeholder="写个又逗比有内涵的标题" class="form-control"/></div>
+                        <div class="spub_row_upload"><button type="button" class="btn btn-info">上传图片</button></div>
+                        <div class="spub_row_textarea">
+                            <textarea class="form-control" placeholder="您提交的笑话需要审核。审核标准为：笑话和图片需有笑点，正文中不能包含邮件地址、电话号码、地址等联系信息，不能与政治相关，不包含色情描写，不带有广告性质。 赠人玫瑰，手有余香。感谢您对网友的快乐馈赠！"></textarea>
+                        </div>
+                        <div class="spub_row_pub_btn"><button type="button" class="btn btn-success btn-lg">发布</button></div>
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hx_mid_right">
+            <div class="spub_mustknow">
+                <h4 style="color:red">发布须知</h4>
+                <p>1. 此网站是一个分享笑话的网站，请各位不要发与笑话无关的内容；</p>
+                <p>2. 涉及政治、色情、暴力、广告等违法违规内容会直接删除；</p>
+                <p>3. 内容中请不要涉及个人隐私；</p>
+                <p>4. 图片请尽量清晰，带水印的图片不会通过；</p>
+                <p>5. 分享你身边的搞笑趣事、搞笑图片、鼓励原创、反对转载；</p>
+                <p>6. 不要重复发帖，会被删除。</p>
+                <p>7. 最多只允许上传3M的图片。</p>
+            </div>
+            <div style="padding:5px">
+                <a href="#"><img src="../assets/images/erweicode.png" style="width: 100%;height: auto;border:solid 1px #ccc; border-radius: 15px"/></a>
+            </div>
+        </div>
+    </div>
+
+    <!--页脚信息-->
+    <div class="x_footer">
+        <div class="footer_list">
+            <ul>
+                <li><a href="">网站帮助</a></li>
+                <li><a href="">版权信息</a></li>
+                <li><a href="">广告业务</a></li>
+            </ul>
+        </div>
+        <p>Copyright©  吻合  2002-2016 , All  Rights  Reserved  京ICP证041501号  海淀分局备案编号 1101082227</p>
+    </div>
+</div>
+
+<script src="../assets/js/jquery-2.2.2.min.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=45lPXDQF4aKW00LpM2xqp1qfSpd3B9ae"></script>  <!--百度地图api--->
+<script>
+    $(function () {
+        $('#myModal').modal('hide');
+
+        // 百度地图API功能   todo
+        var map = new BMap.Map("location");//地图所属容器
+        var myCity = new BMap.LocalCity();
+        myCity.get(function(result){
+            var cityName = result.name;
+            map.setCenter(cityName);
+            $('#location').html(cityName);
+//            $('#change_location').html('[<a href="#">切换城市</a>]');
+        });
+
+        $("#city_hx").citySelect({
+            url:"../assets/js/city.min.js",
+            prov:"北京",
+            city:"朝阳区"
+        });
+    });
+
+    $('.hx-dropdown').click(function () {
+        $('.hx-menu').css('display','block');
+        $('.hx-dropdown span').style.zIndex="999";
+
+    });
+    $('.procityt').click(function (){
+        $('#location').html($('.city').val());
+//        $('.hx-menu').toggle();
+        $('.hx-menu').css('display','none');
+    });
+
+</script>
+</body>
+</html>

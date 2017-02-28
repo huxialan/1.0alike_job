@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en" class="mypage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>个人主页</title>
+    <link rel="shortcut icon" href="slogo.png" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./assets/Font-Awesome-master/css/font-awesome.css"/>
+    <link rel="stylesheet" href="./assets/css/common.css"/>
+    <link rel="stylesheet" href="./assets/css/header.css"/>
+    <link rel="stylesheet" href="./assets/css/inner.css"/>
+    <link rel="stylesheet" href="./assets/css/ssi-uploader.css"/>
+    <style>
+        #myactivity .navac_top{
+        padding-left:25px;
+        }
+        #myactivity .navac_top a{
+            font-size: 14px;
+            font-weight: 600;
+            margin:5px auto;
+            text-decoration: none
+        }
+        #myactivity  .nav-pills > li.active > a,
+        #myactivity  .nav-pills > li.active > a:focus {
+            color: #fff;
+            background-color: #08d1fd;
+        }
+        #my_righteditform p i{
+            margin-right: 15px;
+            color: #1389fe
+        }
+        #my_righteditform p span{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid" >
+    <!--导航栏-->
+    <header class="inners">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="hx_nav row">
+            <div class="hx_nav_head col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                <div class="navbar-header">
+                    <a class="navbar-brand head_logo" href="./index.html">
+                        <img src="assets/images/logo.png"/>
+                    </a>
+                    <span class="hx-dropdown" title="切换城市">
+                             <a href="#">
+                                <span id="location" style="background-color: transparent!important;">[切换城市]</span>
+                                <b class="caret" style="color: #fff"></b>
+                            </a>
+                            <span class="hx-menu">
+                                <div id="city_hx">
+                                    <select class="prov"></select>
+                                    <select class="city" disabled="disabled"></select>
+                                </div>
+                                <button class="btn btn-danger procityf" style="margin-left: 30px">取消</button>
+                                <button type="button" class="btn btn-info procityt">确定</button>
+                            </span>
+                        </span>
+                </div>
+            </div>
+            <div class="hx_nav_divs_divs">
+                <ul>
+                    <li class="user_pic"><a href="./log_reg.html"><img src="assets/images/index/user1.png"/><span class="log_reg">登录|注册</span></a></li>
+                    <li class="in_message"><a href="./message.html"><i class="fa fa-envelope-o"></i><sup style="padding: 1px 4px;font-size:10px;background-color: #f63e31;border-radius:100%">8</sup></a></li>
+                    <li class="settingl"><a href="./setting.html"><i class="fa fa-gear"></i>设置</a></li>
+                </ul>
+            </div>
+            <div class="hx_nav_divs col-lg-offset-1 col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html" style="width: 70px;">首页</a></li>
+                    <li><a href="./hot_topic.html">热点话题</a></li>
+                    <li><a href="subpages/inners_all.html">社会心理</a></li>
+                    <li><a href="./f_talk.html">好友说说</a></li>
+                    <li><a href="./plazza.html">校园广场</a></li>
+                    <li><a href="./smile.html">每日一笑</a></li>
+                    <li class="settings"><a href="./setting.html" style="width: 70px;">设置</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+</header>
+    <!--导航栏-->
+    <div class="row hx_mid">
+        <div class="col-md-offset-1 col-lg-7 col-md-7 col-sm-offset-1 col-sm-7 col-xs-12">
+            <div class="inner_row_mypage">
+                <div class="my_background">
+                    <div class="row text-right"><button type="button" class="btn btn-link btn-edit" onfocus="this.blur()">编辑</button></div>
+                    <div class="row text-center my_backmid">
+                        <div style="width:85px;height:85px;margin: auto">
+                            <img src="assets/images/talk/upic.jpg" class="img-circle"/>
+                            <span data-toggle="modal" data-target="#myModalpic" ><i class="fa fa-edit"></i></span>
+                            <!-- 模态框（Modal） -->
+                            <div class="modal fade" id="myModalpic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <button class="btn btn-danger" style="margin: 15px">选择图片</button>
+                                        <div style="padding: 10px">
+                                            <div id="localImag">
+                                                <img id="preview" style="display: block; width: 150px; height: 180px;"/>
+                                            </div>
+                                            <div class="row" style="margin: 10px;"><input type="file" name="file" id="doc" style="width:150px;font-size: 14px" onchange="javascript:setImagePreview();"></div>
+                                        </div><!--图片上传-->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                            <button type="submit" class="btn btn-info" onclick="pl_acapply()">提交</button>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal -->
+                            </div>
+
+                        </div>
+                        <div class="my_backmid_name"><span style="color: #fff">萌萌哒</span><span class="hx_degree">lv3</span></div>
+                        <div class="my_backmid_acount"><span>账号：hh123456</span><span><i class="fa fa-venus"></i></span></div>
+                        <div class="my_backmid_sign"><span>个性签名：我就是我，颜色不一样的烟火</span></div>
+                    </div>
+                    <div class="text-center"><button type="button"  data-toggle="modal" data-target="#myModal" class="btn btn-success">编辑资料</button>
+                        <!-- 模态框（Modal） -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <div class="modal-title" id="myModalLabel"> <input type="text" class="form-control" disabled="disabled" value="账号：hh123456" style="width:90%;font-size: 18px"/></div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-sm-3 col-xs-12 text-right">昵称：</label>
+                                                <div class="col-md-7 col-sm-7 col-xs-12"><input placeholder="请输入昵称" class="form-control" required="required"/>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-sm-3 col-xs-12 text-right">真实姓名：</label>
+                                                <div class="col-md-7 col-sm-7 col-xs-12"><input type="text" placeholder="请输入真实姓名" class="form-control" required="required"/>
+                                                </div><div style="position:absolute;margin-top:8px;right:25px"><a href="#">仅自己可见</a></div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-sm-3 col-xs-12  text-right">性别：</label>
+                                                <div class="col-md-4 col-sm-4 col-xs-12 text-left">
+                                                    <input type="radio" name="sex"/>&nbsp;&nbsp;&nbsp;<label>男</label>
+                                                    <input type="radio" name="sex" style="margin-left:25px"/>&nbsp;&nbsp;&nbsp;<label>女</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-sm-3 col-xs-12 text-right">个性签名：</label>
+                                                <div class="col-md-7 col-sm-7 col-xs-12"><textarea placeholder="请输入个签" class="form-control" required="required"></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                        <button type="submit" class="btn btn-info" onclick="pl_acapply()">提交</button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="inner_row_mypage_bottom">
+                    <ul class="nav nav-tabs" style="margin-bottom: 15px">
+                        <li class="active"><a data-toggle="tab" href="#mytalk">我的说说</a></li>
+                        <li><a data-toggle="tab" href="#myactivity">我的活动</a></li>
+                        <li><a data-toggle="tab" href="#mygfriend">好友列表</a></li>
+                        <li><a data-toggle="tab" href="#mysmile">我的笑话</a></li>
+                        <!--<li><a data-toggle="tab" href="#myclub">我的社团</a></li>-->
+                        <!--<li><a data-toggle="tab" href="#myclubdy">社团动态</a></li>-->
+                    </ul>
+
+                    <div class="tab-content">
+                        <!--我的说说-->
+                        <div id="mytalk" class="tab-pane fade in active">
+                            <!--动态发布-->
+                            <div class="inner_row">
+                                <div class="inner_row_pldyf">
+                                    <textarea class="form-control" placeholder="说点什么吧..."></textarea>
+                                    <div class="row talk_pub_bottom">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 talk_leftepv">
+                                            <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-smile-o"></i>&nbsp;表情</button>
+                                            <button type="button" class="btn btn-link" onclick="talkPic()" onfocus="this.blur()">图片</button>
+                                            <button type="button" class="btn btn-link" onfocus="this.blur()">视频</button>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right talk_rightpsp">
+                                            <button type="button" class="btn btn-link talk_public" id="talk_public" onfocus="this.blur()"><span id="talk_public_spub">公开</span>
+                                                <i class="fa fa-angle-down" style="position: relative;top:3px"></i>
+                                <span class="talk_public_pubunpub">
+                                    <ul>
+                                        <li id="talk_public_pub">公开</li>
+                                        <li id="talk_public_unpub">不公开</li>
+                                    </ul>
+                                </span>
+                                            </button>
+                                            <button type="button" class="btn btn-link" id="talk_save" onfocus="this.blur()">保存</button>
+                                            <button type="button" class="btn btn-danger pl_talk_publish" id="talk_publish" onfocus="this.blur()">发布</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row talk_picture_div">
+                                    <input type="file" multiple id="talk_picture_upload" />
+                                </div>
+                            </div>
+                            <!--动态说说-->
+                            <div class="inner_row">
+                                <!--一张图片-->
+                                <div class="row dytalk_row">
+                                    <div class="inner_row_pldys">
+                                        <!--说说top-->
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="pldy_userp_m"/></a>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="padding-top: 5px">
+                                                <div class="pldy_usern_m"><a href="#" target="_blank"><span>萌萌哒</span><span class="hx_degree">lv2</span></a></div>
+                                                <div class="pldy_usert_m"><span>2小时45分之前</span><span><i class="fa fa-eye"></i>&nbsp; 浏览（109）</span></div>
+                                            </div>
+                                        </div>
+                                        <!--说说内容-->
+                                        <div class="row">
+                                            <div class="col-md-offset-1 col-sm-offset-2 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                                <div class="pldy_contenttext">
+                                                    夕阳似火，樱花灿烂。<br>
+                                                    灿烂的阳光下，殷红的樱花如火如荼，开的妖娆多姿，把那青山绿水中的庭院渲染的不染尘烟。
+                                                </div>
+                                                <div class="pldy_contentimgone">
+                                                    <img src="assets/images/hot/1.jpg"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner_row_pldycomment" style="background-color:#e8e8e8;padding: 15px">
+                                            <!--动态点赞分享评论-->
+                                            <div class="row">
+                                                <div class="col-md-offset-2 col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/talk/zan0.png" class="plazatalk_zan_img" id="plazatalk_zan_imgf" onclick="plazaZan()"/>&nbsp; <span class="plazatalk_zan_count"  id="plazatalk_zan_countf">21</span></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#mytcu_first"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                                            </div>
+                                            <hr>
+                                            <div class="talk_zan_upic">
+                                                <a href="#"><img src="assets/images/talk/zan1.png"/></a>
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/up2.jpeg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/mao.jpg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/up2.jpeg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="talk_zan_upic_img"/></a>
+                                            </div>
+                                            <div class="talk_comment_upic" id="mytcu_first">
+                                                <div class="talk_comment_upic_first">
+                                                    <div>
+                                                        <a href="#"><img src="assets/images/talk/up2.jpeg"/><span class="talk_comment_upic_a">abc&nbsp;:</span></a>
+                                                        <span class="talk_comment_upic_time">2小时之前<button class="btn btn-link" id="talk_comment_upic_time_btn" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                        <div class="talk_comment_upic_con">哇咔咔，哇咔咔，哇咔咔，果然套路深，，，</div>
+                                                    </div>
+                                                    <div class="talk_comment_upic_firsts"><a href="#" ><img src="assets/images/talk/upic.jpg"/><span class="talk_comment_upic_a">123</span></a><span class="talk_comment_upic_a">&nbsp;回复&nbsp;</span><a href="#" class="talk_comment_upic_a">abc&nbsp;:</a>
+                                                        <span class="talk_comment_upic_time">1小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                        <div class="talk_comment_upic_con">这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。</div>
+                                                    </div>
+                                                </div>
+                                                <div><a href="#"><img src="assets/images/talk/mao.jpg"/><span class="talk_comment_upic_a">一棵树&nbsp;:</span></a><span class="talk_comment_upic_time">20分钟之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                    <div class="talk_comment_upic_con">哈哈，么么哒</div>
+                                                </div>
+                                            </div>
+                                            <div class="talk_comment_subpub">
+                                                <div class="talk_comment_subpubvis"  id="talk_comment_subpubvisid"><div>来说点什么吧。。。</div><i class="fa fa-camera"></i></div>
+                                                <div class="talk_comment_subpubhide" id="talk_comment_subpubhideid">
+                                                    <div class="row">
+                                                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10"><textarea placeholder="来说点什么吧。。。" class="form-control"></textarea></div>
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><i class="fa fa-camera"></i></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-smile-o"></i></button>
+                                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-at"></i></button>
+                                                        <button type="button" class="btn btn-danger pl_talkcom_publish" onfocus="this.blur()">发表</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--两张图片-->
+                                <div class="row dytalk_row">
+                                    <div class="inner_row_pldys">
+                                        <!--说说top-->
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="pldy_userp_m"/></a>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="padding-top: 5px">
+                                                <div class="pldy_usern_m"><a href="#" target="_blank"><span>萌萌哒</span><span class="hx_degree">lv2</span></a></div>
+                                                <div class="pldy_usert_m"><span>2小时45分之前</span><span><i class="fa fa-eye"></i>&nbsp; 浏览（109）</span></div>
+                                            </div>
+                                        </div>
+                                        <!--说说内容-->
+                                        <div class="row">
+                                            <div class="col-md-offset-1 col-sm-offset-2 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                                <div class="pldy_contenttext">人生只如初见，湖畔青衣少年，依旧腼腆，几度流水落花伴岁月同眠；<br>
+                                                    挥笔就此搁浅，十年一品如烟，沧桑厌倦，多少春花秋月随时光荏苒；<br>
+                                                    长亭深情一眼，十年寒窗再现，笔墨纸砚，何时题名金榜隐山水之间；<br>
+                                                    江南烟雨痴缠，满树玉瓣傲然，隔江炊烟，只愿与世无争居西子湖畔；<br>
+                                                    宿命写下恩怨，戎马注定孤单，刀剑血染，何必尔虞我诈守一世长安。
+                                                </div>
+                                                <div class="pldy_contentimgtwo">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <img src="assets/images/hot/1.jpg"/>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <img src="assets/images/hot/3.jpg"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner_row_pldycomment" style="background-color:#e8e8e8;padding: 15px">
+                                            <!--动态点赞分享评论-->
+                                            <div class="row">
+                                                <div class="col-md-offset-2 col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/talk/zan0.png" class="plazatalk_zan_img" onclick="plazaZan()"/>&nbsp; <span class="plazatalk_zan_count">21</span></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                                            </div>
+                                            <hr>
+                                            <div class="talk_zan_upic">
+                                                <a href="#"><img src="assets/images/talk/zan1.png"/></a>
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/up2.jpeg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/mao.jpg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/up2.jpeg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="talk_zan_upic_img"/></a>
+                                            </div>
+                                            <div class="talk_comment_upic">
+                                                <div class="talk_comment_upic_first">
+                                                    <div>
+                                                        <a href="#"><img src="assets/images/talk/up2.jpeg"/><span class="talk_comment_upic_a">abc&nbsp;:</span></a>
+                                                        <span class="talk_comment_upic_time">2小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                        <div class="talk_comment_upic_con">哇咔咔，哇咔咔，哇咔咔，果然套路深，，，</div>
+                                                    </div>
+                                                    <div class="talk_comment_upic_firsts"><a href="#" ><img src="assets/images/talk/upic.jpg"/><span class="talk_comment_upic_a">123</span></a><span class="talk_comment_upic_a">&nbsp;回复&nbsp;</span><a href="#" class="talk_comment_upic_a">abc&nbsp;:</a>
+                                                        <span class="talk_comment_upic_time">1小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                        <div class="talk_comment_upic_con">这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。</div>
+                                                    </div>
+                                                </div>
+                                                <div><a href="#"><img src="assets/images/talk/mao.jpg"/><span class="talk_comment_upic_a">一棵树&nbsp;:</span></a><span class="talk_comment_upic_time">20分钟之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                    <div class="talk_comment_upic_con">哈哈，么么哒</div>
+                                                </div>
+                                            </div>
+                                            <div class="talk_comment_subpub">
+                                                <div class="talk_comment_subpubvis"><div>来说点什么吧。。。</div><i class="fa fa-camera"></i></div>
+                                                <div class="talk_comment_subpubhide">
+                                                    <div class="row">
+                                                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10"><textarea placeholder="来说点什么吧。。。" class="form-control"></textarea></div>
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><i class="fa fa-camera"></i></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-smile-o"></i></button>
+                                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-at"></i></button>
+                                                        <button type="button" class="btn btn-danger pl_talkcom_publish" onfocus="this.blur()">发表</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--3张图片-->
+                                <div class="row dytalk_row">
+                                    <div class="inner_row_pldys">
+                                        <!--说说top-->
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="pldy_userp_m"/></a>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="padding-top: 5px">
+                                                <div class="pldy_usern_m"><a href="#" target="_blank"><span>萌萌哒</span><span class="hx_degree">lv2</span></a></div>
+                                                <div class="pldy_usert_m"><span>2小时45分之前</span><span><i class="fa fa-eye"></i>&nbsp; 浏览（109）</span></div>
+                                            </div>
+                                        </div>
+                                        <!--说说内容-->
+                                        <div class="row">
+                                            <div class="col-md-offset-1 col-sm-offset-2 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                                <div class="pldy_contenttext">
+                                                    如果执著终归于徒然，谁会将此生用尽，只为守候一段触摸不得的缘恋？<br>
+                                                    如果两千多年的执念，就此放下、隔断，是否会有眼泪倾洒，以为祭奠？<br>
+                                                    纵然贵为神尊，东华也会羽化而湮灭。
+                                                </div>
+                                                <div class="pldy_contentimgthree">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                        <img src="assets/images/hot/6.jpg"/>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                        <img src="assets/images/hot/3.jpg"/>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                        <img src="assets/images/hot/1.jpg"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner_row_pldycomment" style="background-color:#e8e8e8;padding: 15px">
+                                            <!--动态点赞分享评论-->
+                                            <div class="row">
+                                                <div class="col-md-offset-2 col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/talk/zan0.png" class="plazatalk_zan_img" onclick="plazaZan()"/>&nbsp; <span class="plazatalk_zan_count">21</span></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                                            </div>
+                                            <hr>
+                                            <div class="talk_zan_upic">
+                                                <a href="#"><img src="assets/images/talk/zan1.png"/></a>
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/up2.jpeg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/mao.jpg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/up2.jpeg" class="talk_zan_upic_img"/></a>
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="talk_zan_upic_img"/></a>
+                                            </div>
+                                            <div class="talk_comment_upic">
+                                                <div class="talk_comment_upic_first">
+                                                    <div>
+                                                        <a href="#"><img src="assets/images/talk/up2.jpeg"/><span class="talk_comment_upic_a">abc&nbsp;:</span></a>
+                                                        <span class="talk_comment_upic_time">2小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                        <div class="talk_comment_upic_con">哇咔咔，哇咔咔，哇咔咔，果然套路深，，，</div>
+                                                    </div>
+                                                    <div class="talk_comment_upic_firsts"><a href="#" ><img src="assets/images/talk/upic.jpg"/><span class="talk_comment_upic_a">123</span></a><span class="talk_comment_upic_a">&nbsp;回复&nbsp;</span><a href="#" class="talk_comment_upic_a">abc&nbsp;:</a>
+                                                        <span class="talk_comment_upic_time">1小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                        <div class="talk_comment_upic_con">这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。</div>
+                                                    </div>
+                                                </div>
+                                                <div><a href="#"><img src="assets/images/talk/mao.jpg"/><span class="talk_comment_upic_a">一棵树&nbsp;:</span></a><span class="talk_comment_upic_time">20分钟之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                    <div class="talk_comment_upic_con">哈哈，么么哒</div>
+                                                </div>
+                                            </div>
+                                            <div class="talk_comment_subpub">
+                                                <div class="talk_comment_subpubvis"><div>来说点什么吧。。。</div><i class="fa fa-camera"></i></div>
+                                                <div class="talk_comment_subpubhide">
+                                                    <div class="row">
+                                                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10"><textarea placeholder="来说点什么吧。。。" class="form-control"></textarea></div>
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><i class="fa fa-camera"></i></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-smile-o"></i></button>
+                                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-at"></i></button>
+                                                        <button type="button" class="btn btn-danger pl_talkcom_publish" onfocus="this.blur()">发表</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--我的活动-->
+                        <div id="myactivity" class="tab-pane fade myactivity">
+                            <ul class="nav nav-pills navac_top">
+                                <li class="active"><a data-toggle="tab" href="#mybuildac"><i class="fa fa-flag-o"></i>&nbsp;我创建</a></li>
+                                <li><a data-toggle="tab" href="#myjoinac"><i class="fa fa-flag-checkered"></i>&nbsp;我参与</a></li>
+                                <li><a href="subpages/plac_pub.html" target="_blank"><i class="fa fa-edit"></i>&nbsp;发布活动</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="mybuildac" class="tab-pane fade in active mybuildac" >
+                                    <div class="inner_row">
+                                        <div class="row">
+                                            <div class="thumbnail row mybuac_throw">
+                                                <a href="#">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumbnail_imgp">
+                                                        <a href="./subpages/plazza_acde.html" target="_blank"><img src="./assets/images/plaza/cycle.jpg" alt="..."/></a>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 caption th_caption">
+                                                        <h4><a href="./subpages/plazza_acde.html" target="_blank">亲近自然，径山骑行游 </a></h4>
+                                                        <p>发起人：李航</p>
+                                                        <p>时间：2016-9-6 10:00</p>
+                                                        <p>地点：杭州市余杭区径山</p>
+                                                        <p>报名截止时间：2016-9-5 24:00</p>
+                                                        <div class="plaza_progress row">
+                                                            <div class="col-lg-2 col-md-3 col-sm-3  col-xs-3" style="width: 76px; padding-right: 0">参与者：</div>
+                                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6" style="padding:0">
+                                                                <div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="25" style="width: 50%;">12</div></div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">25人</div>
+                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;">
+                                                                <button id="pl_acapply" class="btn btn-info " data-toggle="modal" data-target="#myModal_baf">报名</button>
+                                                                <!-- 模态框（Modal） -->
+                                                                <div class="modal fade" id="myModal_baf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_baf" aria-hidden="true">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title" id="myModalLabel_baf">Come on!    &nbsp; &nbsp; &nbsp;Join Us!!!</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <form style="padding-left: 12%">
+                                                                                    <div class="form-group row">
+                                                                                        <label class="col-md-2 col-sm-3 col-xs-12 text-right">姓名：</label>
+                                                                                        <div class="col-md-7 col-sm-7 col-xs-12"><input type="text" placeholder="input your name" class="form-control" required="required"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row">
+                                                                                        <label class="col-md-2 col-sm-3 col-xs-12  text-right">手机号：</label>
+                                                                                        <div class="col-md-7 col-sm-7 col-xs-12"><input type="text" placeholder="input your phonenumber" class="form-control" required="required"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                                                                <button type="submit" class="btn btn-info" onclick="pl_acapply()">提交</button>
+                                                                            </div>
+                                                                        </div><!-- /.modal-content -->
+                                                                    </div><!-- /.modal -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="plaza_label"> 标签：<span>绿色</span>
+                                                            <span>健康</span><span>阳光</span></p>
+                                                    </div>
+                                                    <div class="mybuac_edit">修改</div>
+                                                    <div class="mybuac_del">删除</div>
+                                                </a>
+                                            </div>
+
+                                            <div class="row pl_aczan_row">
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/talk/zan0.png" class="plazaac_zan_img" onclick="plazaZan()"/>&nbsp; <span class="plazaac_zan_count" id="plazaac_zan_countf">21</span></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/talk/favor0.png" class="plazaac_favor_img"/>&nbsp;<span class="plac_favorn">21</span></div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row" >
+                                            <div class="thumbnail row mybuac_throw">
+                                                <a href="#">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumbnail_imgp">
+                                                        <a href="./subpages/plazza_acde.html" target="_blank"><img src="./assets/images/plaza/cycle.jpg" alt="亲密关系测试：你们的亲密程度有多高？"/></a>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 caption th_caption">
+                                                        <h4><a href="#" target="_blank">亲近自然，径山骑行游 </a></h4>
+                                                        <p>发起人：李航</p>
+                                                        <p>时间：2016-9-6 10:00</p>
+                                                        <p>地点：杭州市余杭区径山</p>
+                                                        <p>报名截止时间：2016-9-5 24:00</p>
+                                                        <div class="plaza_progress row">
+                                                            <div class="col-lg-2 col-md-3 col-sm-3  col-xs-3" style="width: 76px; padding-right: 0">参与者：</div>
+                                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6" style="padding:0">
+                                                                <div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="25" style="width: 50%;">12</div></div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">25人</div>
+                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;">
+                                                                <button id="pl_acapplys" class="btn btn-info" data-toggle="modal" data-target="#myModals">报名</button>
+                                                                <!-- 模态框（Modal） -->
+                                                                <div class="modal fade" id="myModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title" id="myModalLabels">Come on!    &nbsp; &nbsp; &nbsp;Join Us!!!</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <form style="padding-left: 12%">
+                                                                                    <div class="form-group row">
+                                                                                        <label class="col-md-2 col-sm-3 col-xs-12 text-right">姓名：</label>
+                                                                                        <div class="col-md-7 col-sm-7 col-xs-12"><input type="text" placeholder="input your name" class="form-control" required="required"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row">
+                                                                                        <label class="col-md-2 col-sm-3 col-xs-12  text-right">手机号：</label>
+                                                                                        <div class="col-md-7 col-sm-7 col-xs-12"><input type="text" placeholder="input your phonenumber" class="form-control" required="required"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                                                                <button type="submit" class="btn btn-info" onclick="pl_acapply()">提交</button>
+                                                                            </div>
+                                                                        </div><!-- /.modal-content -->
+                                                                    </div><!-- /.modal -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="plaza_label"> 标签：<span>绿色</span>
+                                                            <span>健康</span><span>阳光</span></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="row pl_aczan_row">
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/talk/zan0.png" class="plazaac_zan_img" onclick="plazaZan()"/>&nbsp; <span class="plazaac_zan_count">11</span></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/talk/favor0.png" class="plazaac_favor_img"/>&nbsp;<span class="plac_favorn">21</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="myjoinac" class="tab-pane fade">
+                                    <div class="inner_row">
+                                        <div class="row" >
+                                            <div class="thumbnail row" style="margin-bottom: 5px">
+                                                <a href="#">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumbnail_imgp">
+                                                        <a href="./subpages/plazza_acde.html" target="_blank"><img src="./assets/images/plaza/cycle.jpg" alt="..."/></a>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 caption th_caption">
+                                                        <h4><a href="./subpages/plazza_acde.html" target="_blank">亲近自然，径山骑行游 </a></h4>
+                                                        <p>发起人：李航</p>
+                                                        <p>时间：2016-9-6 10:00</p>
+                                                        <p>地点：杭州市余杭区径山</p>
+                                                        <p>报名截止时间：2016-9-5 24:00</p>
+                                                        <div class="plaza_progress row">
+                                                            <div class="col-lg-2 col-md-3 col-sm-3  col-xs-3" style="width: 76px; padding-right: 0">参与者：</div>
+                                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6" style="padding:0">
+                                                                <div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="25" style="width: 50%;">12</div></div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">25人</div>
+                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;">
+                                                                <button class="btn btn-info " data-toggle="modal" data-target="#myModal_jaf">报名</button>
+                                                                <!-- 模态框（Modal） -->
+                                                                <div class="modal fade" id="myModal_jaf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_jaf" aria-hidden="true">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title" id="myModalLabel_jaf">Come on!    &nbsp; &nbsp; &nbsp;Join Us!!!</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <form style="padding-left: 12%">
+                                                                                    <div class="form-group row">
+                                                                                        <label class="col-md-2 col-sm-3 col-xs-12 text-right">姓名：</label>
+                                                                                        <div class="col-md-7 col-sm-7 col-xs-12"><input type="text" placeholder="input your name" class="form-control" required="required"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row">
+                                                                                        <label class="col-md-2 col-sm-3 col-xs-12  text-right">手机号：</label>
+                                                                                        <div class="col-md-7 col-sm-7 col-xs-12"><input type="text" placeholder="input your phonenumber" class="form-control" required="required"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                                                                <button type="submit" class="btn btn-info" onclick="pl_acapply()">提交</button>
+                                                                            </div>
+                                                                        </div><!-- /.modal-content -->
+                                                                    </div><!-- /.modal -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="plaza_label"> 标签：<span>绿色</span>
+                                                            <span>健康</span><span>阳光</span></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="row pl_aczan_row">
+                                                <div class="col-md-offset-2 col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/talk/zan0.png" class="plazaac_zan_img" onclick="plazaZan()"/>&nbsp; <span class="plazaac_zan_count">21</span></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row" >
+                                            <div class="thumbnail row" style="margin-bottom: 5px">
+                                                <a href="#">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumbnail_imgp">
+                                                        <a href="./subpages/plazza_acde.html" target="_blank"><img src="./assets/images/plaza/cycle.jpg" alt="亲密关系测试：你们的亲密程度有多高？"/></a>
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 caption th_caption">
+                                                        <h4><a href="#" target="_blank">亲近自然，径山骑行游 </a></h4>
+                                                        <p>发起人：李航</p>
+                                                        <p>时间：2016-9-6 10:00</p>
+                                                        <p>地点：杭州市余杭区径山</p>
+                                                        <p>报名截止时间：2016-9-5 24:00</p>
+                                                        <div class="plaza_progress row">
+                                                            <div class="col-lg-2 col-md-3 col-sm-3  col-xs-3" style="width: 76px; padding-right: 0">参与者：</div>
+                                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6" style="padding:0">
+                                                                <div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="25" style="width: 50%;">12</div></div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">25人</div>
+                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding:0;">
+                                                                <button class="btn btn-info" data-toggle="modal" data-target="#myModal_jas">报名</button>
+                                                                <!-- 模态框（Modal） -->
+                                                                <div class="modal fade" id="myModal_jas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title">Come on!    &nbsp; &nbsp; &nbsp;Join Us!!!</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <form style="padding-left: 12%">
+                                                                                    <div class="form-group row">
+                                                                                        <label class="col-md-2 col-sm-3 col-xs-12 text-right">姓名：</label>
+                                                                                        <div class="col-md-7 col-sm-7 col-xs-12"><input type="text" placeholder="input your name" class="form-control" required="required"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row">
+                                                                                        <label class="col-md-2 col-sm-3 col-xs-12  text-right">手机号：</label>
+                                                                                        <div class="col-md-7 col-sm-7 col-xs-12"><input type="text" placeholder="input your phonenumber" class="form-control" required="required"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                                                                <button type="submit" class="btn btn-info" onclick="pl_acapply()">提交</button>
+                                                                            </div>
+                                                                        </div><!-- /.modal-content -->
+                                                                    </div><!-- /.modal -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="plaza_label"> 标签：<span>绿色</span>
+                                                            <span>健康</span><span>阳光</span></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="row pl_aczan_row">
+                                                <div class="col-md-offset-2 col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/talk/zan0.png" class="plazaac_zan_img" onclick="plazaZan()"/>&nbsp; <span class="plazaac_zan_count" id="plazaac_zan_counts">11</span></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div id="mypubac" class="tab-pane fade">
+                                    <form >
+                                        <ul class="my_ul ">
+                                            <li  style="background-color: #fff">
+                                                <p><label><img src="assets/images/my/user.png"/>&nbsp;发起人：</label> <input type="text" placeholder="发布人"/></p>
+                                                <p><label><img src="assets/images/my/actopic.png"/>&nbsp;主题：</label> <input type="text" placeholder="活动主题"/></p>
+                                                <p><label><img src="assets/images/my/time.png"/>&nbsp;时间：</label> <input type="text" placeholder="时间"/></p>
+                                                <p><label><img src="assets/images/my/address.png"/>&nbsp;地点：</label> <input type="text" placeholder="地点"/></p>
+                                                <p><label><img src="assets/images/my/time.png"/>&nbsp;报名截止：</label> <input type="text" placeholder="截止时间"/></p>
+                                                <p><label><img src="assets/images/my/acusers.png"/>&nbsp;人数：</label> <input type="text" placeholder="总人数"/></p>
+                                                <p><label>是否审核：</label>
+                                                    <input type="radio" name="au"/>&nbsp;<label>是</label>
+                                                    <input type="radio" name="au"/>&nbsp;<label>否</label></p>
+                                            </li>
+                                            <li  style="background-color: #fff">
+                                                <p><label><img src="assets/images/my/acintro.png"/>&nbsp;活动简介：</label> <textarea class="form-control" placeholder="活动简介"></textarea></p>
+                                                <p><label><img src="assets/images/my/acprocess.png"/>&nbsp;活动流程：</label> <textarea  class="form-control" placeholder="活动流程"></textarea></p>
+                                                <p><label><img src="assets/images/my/acwarn.png"/>&nbsp;温馨提示：</label> <textarea  class="form-control" placeholder="温馨提示"></textarea></p>
+                                            </li>
+                                            <li>
+                                                <div id="demo">
+                                                    <div id="as"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <label>添加标签(用逗号“，”隔开)</label>
+                                                <textarea class="form-control" placeholder="添加标签"></textarea>
+                                            </li>
+                                            <li class="text-center">
+                                                <button type="button" class="btn btn-info btn-lg">提交</button>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>-->
+                            </div>
+
+                        </div>
+                        <!--我的好友-->
+                        <div id="mygfriend" class="tab-pane fade mygfriend">
+                            <div class="inner_row">
+                                <div class="row plac_joinusers">
+                                    <h4 class="plac_joinusers_h4" data-toggle="collapse" data-target="#demo"><span><i class="fa fa-users"></i><span>我的好友</span></span></h4>
+                                    <div class="collapse in plac_joinupic" id="demo">
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name" title="萌萌哒萌萌哒萌萌哒">萌萌哒萌萌哒萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/up2.jpeg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name" title="李一李一李一">李一李一李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/mao.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/up2.jpeg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/mao.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/up2.jpeg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/mao.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="row plac_joinusers">
+                                    <h4 class="plac_joinusers_h4" data-toggle="collapse" data-target="#demo2"><span><i class="fa fa-user"></i><span>社团好友</span></span></h4>
+                                    <div class="collapse in plac_joinupic" id="demo2">
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name" title="萌萌哒萌萌哒萌萌哒">萌萌哒萌萌哒萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/up2.jpeg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name" title="李一李一李一">李一李一李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/mao.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/up2.jpeg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/mao.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/up2.jpeg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/mao.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="row plac_joinusers">
+                                    <h4 class="plac_joinusers_h4" data-toggle="collapse" data-target="#demo3"><span><i class="fa fa-user"></i><span>高中同学</span></span></h4>
+                                    <div class="collapse in plac_joinupic" id="demo3">
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name" title="萌萌哒萌萌哒萌萌哒">萌萌哒萌萌哒萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/up2.jpeg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name" title="李一李一李一">李一李一李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/mao.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/up2.jpeg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/mao.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/up2.jpeg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="#"><img src="./assets/images/talk/mao.jpg" class="plac_joinupic_img"/>
+                                                <span class="plac_ju_name">李一</span><span class="plac_ju_date">12月22日</span></a>
+                                        </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div> <div>
+                                        <a href="#"><img src="./assets/images/talk/upic.jpg" class="plac_joinupic_img"/>
+                                            <span class="plac_ju_name">萌萌哒</span><span class="plac_ju_date">12月22日</span></a>
+                                    </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--我的笑话-->
+                        <div id="mysmile" class="tab-pane fade mysmile">
+                            <div class="inner_row">
+                                <div class="row dytalk_row">
+                                    <div class="inner_row_pldys">
+                                        <!--笑话top-->
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                                                <a href="#"><img src="assets/images/talk/upic.jpg" class="pldy_userp_m"/></a>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8" style="padding-top: 5px;">
+                                                <div class="pldy_usern_m"><a href="#" target="_blank"><span>李一</span><span class="hx_degree">lv2</span></a></div>
+                                                <div class="pldy_usert_m"><span>2小时45分之前</span><span><i class="fa fa-eye"></i>&nbsp; 浏览（109）</span></div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding: 0">
+                                                <div class="smile_delete">删&nbsp;除</div>
+                                            </div>
+                                        </div>
+                                        <!--笑话内容-->
+                                        <div class="row">
+                                            <div class="col-md-offset-1 col-sm-offset-2 col-xs-offset-1 col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                                <div class="smile_topic"><a href="subpages/smile_de.html">没想到你是这样的男朋友 </a></div>
+                                                <div class="smile_pic">
+                                                    <img src="assets/images/smile/sm1.gif"/>
+                                                </div>
+                                                <div class="pldy_contenttext">
+                                                    呵呵，会被打死的，，，
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--笑话点赞分享评论-->
+                                        <div class="row smilezan_row">
+                                            <div class=" col-lg-2 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/smile/s_smile0.png" class="smile_sm_img"  id="smile_sm_imgf" onclick="smileSm()"/>&nbsp; <span id="smile_sm_countf">21</span></div>
+                                            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3"><img src="assets/images/smile/s_baba.png" class="smile_baba_img"  id="smile_baba_imgf" onclick="smileSmba()"/>&nbsp; <span id="smile_baba_countf">21</span></div>
+                                            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/images/talk/share.png"/> &nbsp;<span class="talk_share">21</span></a></div>
+                                            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3"><a href="#" id="inner_row_smilecomment_btn"><img src="assets/images/talk/comment.png"/>&nbsp;<span class="talk_comment">21</span></a></div>
+                                        </div>
+                                        <div class="inner_row_pldycomment" id="inner_row_smilecomment">
+                                            <div class="talk_comment_upic">
+                                                <p><a href="#"><img src="assets/images/talk/up2.jpeg"/><span class="talk_comment_upic_a">abc&nbsp;:</span></a>
+                                                    <span class="talk_comment_upic_time">2小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                <div class="talk_comment_upic_con">哇咔咔，哇咔咔，哇咔咔，果然套路深，，，</div>
+                                                </p>
+                                                <p><a href="#"><img src="assets/images/talk/upic.jpg"/><span class="talk_comment_upic_a">123</span></a><span class="talk_comment_upic_a">&nbsp;回复&nbsp;</span><a href="#" class="talk_comment_upic_a">abc&nbsp;:</a>
+                                                    <span class="talk_comment_upic_time">1小时之前<button class="btn btn-link" onfocus="this.blur()"><i class="fa fa-commenting"></i></button></span>
+                                                <div class="talk_comment_upic_con">这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。这个可以有。。。</div>
+                                                </p>
+                                                <p>
+                                                    <a href="#"><img src="assets/images/talk/up2.jpeg"/>
+                                                        <span class="talk_comment_upic_a">abc</span>
+                                                    </a>
+                                                    <span class="talk_comment_upic_a">&nbsp;回复&nbsp;</span>
+                                                    <a href="#" class="talk_comment_upic_a">123&nbsp;:</a>
+                                                    <span class="talk_comment_upic_time">20分钟之前
+                                                        <button class="btn btn-link" onfocus="this.blur()">
+                                                            <i class="fa fa-commenting"></i>
+                                                        </button>
+                                                    </span>
+                                                <div class="talk_comment_upic_con">哈哈，么么哒</div>
+                                                </p>
+                                            </div>
+                                            <div class="talk_comment_subpub">
+                                                <div class="talk_comment_subpubvis" id="stalk_comment_subpubvisid"><div>来说点什么吧。。。</div><i class="fa fa-camera"></i></div>
+                                                <div class="talk_comment_subpubhide" id="stalk_comment_subpubhideid">
+                                                    <div class="row">
+                                                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10"><textarea placeholder="来说点什么吧。。。" class="form-control"></textarea></div>
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><i class="fa fa-camera"></i></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-smile-o"></i></button>
+                                                        <button type="button" class="btn btn-link" onfocus="this.blur()"><i class="fa fa-at"></i></button>
+                                                        <button type="button" class="btn btn-danger pl_talkcom_publish" onfocus="this.blur()">发表</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                       <!-- <div id="myclub" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-md-offset-1">你正在成为你想成为的人吗？</div>
+                            </div>
+                        </div>-->
+                        <!--<div id="myclubdy" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-md-offset-1">你正在成为你想成为的人吗？</div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hx_mid_right">
+            <div class="hx_mid_right_search">
+                <input type="search" class="form-control" placeholder="搜索"/>
+                <i class="fa fa-search"></i>
+            </div>
+
+            <div class="my_redit" style="padding: 0">
+                <div style="background-color: #12b6fd;height: 40px; line-height: 40px; color: #fff;text-align: center;font-size: 18px;font-weight: 600">
+                    个人档<span style="position: absolute;right:25px" id="my_rightedit"><i class="fa fa-edit"></i></span>
+                </div>
+                <div id="my_righteditform" style="padding: 15px">
+                    <p> <i class="fa fa-file-text-o"></i><span id="my_fword">知我者谓我心忧，不知我者谓我何求</span></p>
+                    <p> <i class="fa fa-calendar"></i><span id="my_date">1999-12-12</span></p>
+                    <p> <i class="fa fa-map-marker"></i><span id="my_locate">杭州市余杭区</span></p>
+                    <p> <i class="fa fa-university"></i><span id="my_school">杭州师范大学仓前校区</span></p>
+                    <p> <i class="fa fa-phone-square"></i><span id="my_phonen">18439853045</span></p>
+                    <p> <i class="fa fa-qq"></i><span id="my_qq">1149658778</span></p>
+                    <p> <i class="fa fa-wechat"></i><span id="my_wechat">hx1234564</span></p>
+                    <p> <i class="fa fa-envelope-o"></i><span id="my_email">1149658778@qq.com</span></p>
+                    <p> <i class="fa fa-file-video-o"></i><span id="my_instro">主人很懒哦，什么都没写</span></p>
+                </div>
+
+            </div>
+            <div>
+                <h4>好友推荐</h4>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-right: 5px">
+                        <a href="#"><img src="./assets/images/inner/inner_arf.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left:5px;">
+                        <a href="#"><img src="./assets/images/inner/inners_ars.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:10px;padding-right: 10px;padding-top: 15px">
+                        <a href="#"> <img src="./assets/images/inner/inners_art.jpg" style="width: 100%;height: auto"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--页脚信息-->
+    <div class="x_footer">
+        <div class="footer_list">
+            <ul>
+                <li><a href="">网站帮助</a></li>
+                <li><a href="">版权信息</a></li>
+                <li><a href="">广告业务</a></li>
+            </ul>
+        </div>
+        <p>Copyright©  吻合  2002-2016 , All  Rights  Reserved  京ICP证041501号  海淀分局备案编号 1101082227</p>
+    </div>
+</div>
+
+<script src="./assets/js/jquery-2.2.2.min.js"></script>
+<script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./assets/js/ssi-uploader.js"></script>
+<script type="text/javascript" src="./assets/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=45lPXDQF4aKW00LpM2xqp1qfSpd3B9ae"></script>  <!--百度地图api--->
+<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<script>
+    $(function () {
+        $('#myModal').modal('hide');
+
+        // 百度地图API功能   todo
+        var map = new BMap.Map("location");//地图所属容器
+        var myCity = new BMap.LocalCity();
+        myCity.get(function(result){
+            var cityName = result.name;
+            map.setCenter(cityName);
+            $('#location').html(cityName);
+//            $('#change_location').html('[<a href="#">切换城市</a>]');
+        });
+
+        $("#city_hx").citySelect({
+            prov:"北京",
+            city:"朝阳区"
+        });
+
+
+    });
+
+    var c=0;
+    $('.hx-dropdown>a').click(function () {
+        if(c==0){
+            $('.hx-menu').css('display','block');
+//            $('.hx-dropdown span').style.zIndex="999";
+            c=1;
+        }else{
+            $('.hx-menu').css('display','none');
+            c=0;
+        }
+    });
+    $('.procityf').click(function () {
+        $('.hx-menu').css('display','none');
+    });
+    $('.procityt').click(function (){
+//        alert($('.prov').val());
+        $('#location').html($('.city').val());
+        $('.hx-menu').css('display','none');
+    });
+
+//    点赞
+    var a=0;
+    function plazaZan(){
+        var zan_dy=$("#plazatalk_zan_countf").text();
+        if(a==0){
+            $("#plazatalk_zan_imgf")[0].src="assets/images/talk/zan1.png";
+            $("#plazatalk_zan_countf").html(zan_dy*1+1);
+            a=1;
+        }else {
+            $("#plazatalk_zan_imgf")[0].src="assets/images/talk/zan0.png";
+            $("#plazatalk_zan_countf").html(zan_dy*1-1);
+            a=0;
+        }
+    }
+//    评论
+    $('#talk_comment_upic_time_btn').click(function (){
+        $('#talk_comment_subpubvisid').css('display','none');
+        $('#talk_comment_subpubhideid').css('display','block');
+        $('#talk_comment_subpubhideid textarea').focus();
+    });
+    $('#talk_comment_subpubvisid').click(function (){
+        $('#talk_comment_subpubvisid').css('display','none');
+        $('#talk_comment_subpubhideid').css('display','block');
+        $('#talk_comment_subpubhideid textarea').focus();
+    });
+
+//    我的笑话
+    //    点赞
+    var as=0;
+    function smileSm(){
+        var zan_sm=$("#smile_sm_countf").text();
+        if(as==0){
+            $("#smile_sm_imgf")[0].src="assets/images/smile/s_smile1.png";
+            $("#smile_sm_countf").html(zan_sm*1+1);
+            as=1;
+        }else {
+            $("#smile_sm_imgf")[0].src="assets/images/smile/s_smile0.png";
+            $("#smile_sm_countf").html(zan_sm*1-1);
+            as=0;
+        }
+    }
+    var ba=0;
+    function smileSmba(){
+        var zan_ba=$("#smile_baba_countf").text();
+        if(ba==0){
+            $("#smile_baba_imgf")[0].src="assets/images/smile/s_baba1.png";
+            $("#smile_baba_countf").html(zan_ba*1+1);
+            ba=1;
+        }else {
+            $("#smile_baba_imgf")[0].src="assets/images/smile/s_baba.png";
+            $("#smile_baba_countf").html(zan_ba*1-1);
+            ba=0;
+        }
+    }
+    //   笑话 评论
+    $('#inner_row_smilecomment_btn').click(function (){
+        $('#inner_row_smilecomment').toggle();
+        $('#stalk_comment_subpubhideid textarea').focus();
+    });
+
+    $('.talk_comment_upic_time button').click(function (){
+        $('#stalk_comment_subpubvisid').css('display','none');
+        $('#stalk_comment_subpubhideid').css('display','block');
+        $('#stalk_comment_subpubhideid textarea').focus();
+    });
+    $('#talk_comment_subpubvisid').click(function (){
+        $('#stalk_comment_subpubvisid').css('display','none');
+        $('#stalk_comment_subpubhideid').css('display','block');
+        $('#stalk_comment_subpubhideid textarea').focus();
+    });
+
+</script>
+<script>
+    $(function () {
+        var a=0;
+        $('#my_rightedit').click(function (){
+            if(a==0){
+                document.getElementById("my_fword").contentEditable = true;
+                document.getElementById("my_date").contentEditable = true;
+                document.getElementById("my_locate").contentEditable = true;
+                document.getElementById("my_school").contentEditable = true;
+                document.getElementById("my_qq").contentEditable = true;
+                document.getElementById("my_wechat").contentEditable = true;
+                document.getElementById("my_email").contentEditable = true;
+                document.getElementById("my_instro").contentEditable = true;
+                var h="<div class='text-center hx_btne'><button class='btn btn-success' onclick='hx_btn()'>保存</button></div>";
+                $(".my_redit").append(h);
+                a=1;
+            }else {
+//                document.getElementById("my_righteditform").contentEditable = false ;
+                document.getElementById("my_fword").contentEditable = false;
+                document.getElementById("my_date").contentEditable = false;
+                document.getElementById("my_locate").contentEditable = false;
+                document.getElementById("my_school").contentEditable = false;
+                document.getElementById("my_qq").contentEditable = false;
+                document.getElementById("my_wechat").contentEditable = false;
+                document.getElementById("my_email").contentEditable = false;
+                document.getElementById("my_instro").contentEditable = false;
+                $('.hx_btne').css("display","none");
+                a=0;
+            }
+
+        });
+
+    });
+    function hx_btn() {
+//        document.getElementById("my_righteditform").contentEditable = false ;
+        document.getElementById("my_fword").contentEditable = false;
+        document.getElementById("my_date").contentEditable = false;
+        document.getElementById("my_locate").contentEditable = false;
+        document.getElementById("my_school").contentEditable = false;
+        document.getElementById("my_qq").contentEditable = false;
+        document.getElementById("my_wechat").contentEditable = false;
+        document.getElementById("my_email").contentEditable = false;
+        document.getElementById("my_instro").contentEditable = false;
+        $('.hx_btne').css("display","none");
+        a=0;
+    }
+
+    //下面用于图片上传预览功能
+    function setImagePreview(avalue) {
+        var docObj=document.getElementById("doc");
+
+        var imgObjPreview=document.getElementById("preview");
+        if(docObj.files && docObj.files[0])
+        {
+//火狐下，直接设img属性
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '150px';
+            imgObjPreview.style.height = '180px';
+//imgObjPreview.src = docObj.files[0].getAsDataURL();
+
+//火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+        }
+        else
+        {
+//IE下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+            var localImagId = document.getElementById("localImag");
+//必须设置初始大小
+            localImagId.style.width = "150px";
+            localImagId.style.height = "180px";
+//图片异常的捕捉，防止用户修改后缀来伪造图片
+            try{
+                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            }
+            catch(e)
+            {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+
+    //    说说是否公开
+    $('#talk_public_pub').click(function (){
+        $('#talk_public_spub').text($('#talk_public_pub').text());
+    }); $('#talk_public_unpub').click(function (){
+        $('#talk_public_spub').text($('#talk_public_unpub').text());
+    });
+    //图片上传
+    function talkPic(){
+        $('.talk_picture_div').css('display','block');
+    }
+    $('#talk_picture_upload').ssi_uploader({url:'#',dropZone:false,allowed:['jpg','gif','jpeg','png','pdf']});
+
+
+</script>
+</body>
+</html>

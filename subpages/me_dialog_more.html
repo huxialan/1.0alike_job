@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" class="me_dialog_more">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>群好友聊天</title>
+    <link rel="shortcut icon" href="../slogo.png" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../assets/Font-Awesome-master/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../assets/css/chat.css"/>
+    <link rel="stylesheet" href="../assets/css/common.css"/>
+    <link rel="stylesheet" href="../assets/css/header.css"/>
+</head>
+<body>
+<div class="container-fluid" >
+    <!--导航栏-->
+    <header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="hx_nav row">
+                <div class="hx_nav_head col-lg-offset-1 col-md-offset-1 col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                    <div class="navbar-header">
+                        <a class="navbar-brand head_logo" href="../index.html">
+                            <img src="../assets/images/logo.png"/>
+                        </a>
+                        <span class="hx-dropdown" title="切换城市">
+                             <a href="#">
+                                <span id="location" style="background-color: transparent!important;">[切换城市]</span>
+                                <b class="caret" style="color: #fff"></b>
+                            </a>
+                            <span class="hx-menu">
+                                <div id="city_hx">
+                                    <select class="prov"></select>
+                                    <select class="city" disabled="disabled"></select>
+                                </div>
+                                <button class="btn btn-danger procityf" style="margin-left: 30px">取消</button>
+                                <button type="button" class="btn btn-info procityt">确定</button>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="hx_nav_divs_divs">
+                    <ul>
+                        <li class="user_pic"><a href="../log_reg.html"><img src="../assets/images/index/user1.png"/><span class="log_reg">登录|注册</span></a></li>
+                        <li class="in_message"><a href="../message.html"><i class="fa fa-envelope-o"></i><sup style="padding: 1px 4px;font-size:10px;background-color: #f63e31;border-radius:100%">8</sup></a></li>
+                        <li class="settingl"><a href="../setting.html"><i class="fa fa-gear"></i>设置</a></li>
+                    </ul>
+                </div>
+                <div class="hx_nav_divs col-lg-offset-1 col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html" style="width: 70px;">首页</a></li>
+                        <li><a href="../hot_topic.html">热点话题</a></li>
+                        <li><a href="./inners_all.html">社会心理</a></li>
+                        <li><a href="../f_talk.html">好友说说</a></li>
+                        <li><a href="../plazza.html">校园广场</a></li>
+                        <li><a href="../smile.html">每日一笑</a></li>
+                        <li class="settings"><a href="../setting.html" style="width: 70px;">设置</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--导航栏-->
+    <div class="row message_mid">
+        <div class="col-md-offset-1 col-sm-offset-1 col-lg-2 col-md-2  col-sm-2 col-xs-12 media_left">
+            <div class="panel media_left_pf">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#me_dia_gf">好友</a></li>
+                    <li><a data-toggle="tab" href="#me_dia_chat">即时聊</a></li>
+                    <li><a data-toggle="tab" href="#me_dia_groups">我的群</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="me_dia_gf" class="tab-pane fade in active me_dia_gf">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <a data-toggle="collapse" href="#collapseOne"><i class="fa fa-caret-right me_dia_gf_pcar"></i>社团好友</a>
+                                </div>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <ul>
+                                    <li oncontextmenu="return false;" id="me_dia_gf01">
+                                        <img src="../assets/images/talk/upic.jpg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">李一</span><span class="md_nickname">（君子玉）</span><span class="hxmd_degree">LV3</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div>
+                                        </div>
+                                        <div class="me_dia_gf_click">
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-paper-plane-o"></i>发送消息</a></li>
+                                                <li class="list-group-item"><a data-toggle="modal" data-target="#myModal_beizu"><i class="fa fa-edit"></i>修改备注</a></li>
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-trash-o"></i>删除好友</a></li>
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-arrows"></i>移动好友</a></li>
+                                                <li class="list-group-item"><a href="../mypage_out.html"><i class="fa fa-file-text-o"></i>查看主页</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 模态框（Modal） -->
+                                        <div class="modal fade myModal_beizu" id="myModal_beizu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_beizu" aria-hidden="true">
+                                            <div class="modal-dialog" style="width:210px">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel_beizu"><i class="fa fa-edit"></i>修改备注名称</h4>
+                                                    </div>
+                                                    <div class="modal-body"><input type="text" class="form-control"/></div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                                                        <button type="button" class="btn btn-success">保存</button>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal -->
+                                        </div>
+                                    </li>
+                                    <li><img src="../assets/images/talk/up2.jpeg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">张扬</span><span class="md_nickname">（大长老）</span><span class="hxmd_degree">LV6</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                    </li>
+                                    <li><img src="../assets/images/talk/mao.jpg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">风倾城</span><span class="md_nickname">（呃、、）</span><span class="hxmd_degree">LV1</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <a data-toggle="collapse" href="#collapseTwo">
+                                        <i class="fa fa-caret-right me_dia_gf_pcar"></i>我的好友</a>
+                                </div>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/images/talk/upic.jpg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">李一</span><span class="md_nickname">（君子玉）</span><span class="hxmd_degree">LV3</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                        <div class="me_dia_gf_click">
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-paper-plane-o"></i>发送消息</a></li>
+                                                <li class="list-group-item"><a data-toggle="modal" data-target="#myModal_beizu2"><i class="fa fa-edit"></i>修改备注</a></li>
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-trash-o"></i>删除好友</a></li>
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-arrows"></i>移动好友</a></li>
+                                                <li class="list-group-item"><a href="../mypage_out.html"><i class="fa fa-file-text-o"></i>查看主页</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 模态框（Modal） -->
+                                        <div class="modal fade myModal_beizu" id="myModal_beizu2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_beizu2" aria-hidden="true">
+                                            <div class="modal-dialog" style="width:210px">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel_beizu2"><i class="fa fa-edit"></i>修改备注名称</h4>
+                                                    </div>
+                                                    <div class="modal-body"><input type="text" class="form-control"/></div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                                                        <button type="button" class="btn btn-success">保存</button>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal -->
+                                        </div>
+
+                                    </li>
+                                    <li><img src="../assets/images/talk/up2.jpeg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">张扬</span><span class="md_nickname">（大长老）</span><span class="hxmd_degree">LV6</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                    </li>
+                                    <li><img src="../assets/images/talk/mao.jpg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">风倾城</span><span class="md_nickname">（呃、、）</span><span class="hxmd_degree">LV1</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <a data-toggle="collapse" href="#collapseThree">
+                                        <i class="fa fa-caret-right me_dia_gf_pcar"></i>我的大学</a>
+                                </div>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/images/talk/upic.jpg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">李一</span><span class="md_nickname">（君子玉）</span><span class="hxmd_degree">LV3</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                        <div class="me_dia_gf_click">
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-paper-plane-o"></i>发送消息</a></li>
+                                                <li class="list-group-item"><a data-toggle="modal" data-target="#myModal_beizu3"><i class="fa fa-edit"></i>修改备注</a></li>
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-trash-o"></i>删除好友</a></li>
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-arrows"></i>移动好友</a></li>
+                                                <li class="list-group-item"><a href="../mypage_out.html"><i class="fa fa-file-text-o"></i>查看主页</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 模态框（Modal） -->
+                                        <div class="modal fade myModal_beizu" id="myModal_beizu3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_beizu3" aria-hidden="true">
+                                            <div class="modal-dialog" style="width:210px">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel_beizu3"><i class="fa fa-edit"></i>修改备注名称</h4>
+                                                    </div>
+                                                    <div class="modal-body"><input type="text" class="form-control"/></div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                                                        <button type="button" class="btn btn-success">保存</button>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal -->
+                                        </div>
+
+                                    </li>
+                                    <li><img src="../assets/images/talk/up2.jpeg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">张扬</span><span class="md_nickname">（大长老）</span><span class="hxmd_degree">LV6</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                    </li>
+                                    <li><img src="../assets/images/talk/mao.jpg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">风倾城</span><span class="md_nickname">（呃、、）</span><span class="hxmd_degree">LV1</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <a data-toggle="collapse" href="#collapseFour">
+                                        <i class="fa fa-caret-right me_dia_gf_pcar"></i>君子之交</a>
+                                </div>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <ul>
+                                    <li>
+                                        <img src="../assets/images/talk/upic.jpg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">李一</span><span class="md_nickname">（君子玉）</span><span class="hxmd_degree">LV3</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                        <div class="me_dia_gf_click">
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-paper-plane-o"></i>发送消息</a></li>
+                                                <li class="list-group-item"><a data-toggle="modal" data-target="#myModal_beizu4"><i class="fa fa-edit"></i>修改备注</a></li>
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-trash-o"></i>删除好友</a></li>
+                                                <li class="list-group-item"><a href="#"><i class="fa fa-arrows"></i>移动好友</a></li>
+                                                <li class="list-group-item"><a href="../mypage_out.html"><i class="fa fa-file-text-o"></i>查看主页</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 模态框（Modal） -->
+                                        <div class="modal fade myModal_beizu" id="myModal_beizu4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_beizu4" aria-hidden="true">
+                                            <div class="modal-dialog" style="width:210px">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel_beizu4"><i class="fa fa-edit"></i>修改备注名称</h4>
+                                                    </div>
+                                                    <div class="modal-body"><input type="text" class="form-control"/></div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                                                        <button type="button" class="btn btn-success">保存</button>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal -->
+                                        </div>
+
+                                    </li>
+                                    <li><img src="../assets/images/talk/up2.jpeg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">张扬</span><span class="md_nickname">（大长老）</span><span class="hxmd_degree">LV6</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                    </li>
+                                    <li><img src="../assets/images/talk/mao.jpg" class="me_portrait_small"/>
+                                        <div>
+                                            <div class="md_nnde"><span class="md_namebz">风倾城</span><span class="md_nickname">（呃、、）</span><span class="hxmd_degree">LV1</span></div>
+                                            <div class="md_sign">我就是我，颜色不一样的烟火</div></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="me_dia_chat" class="tab-pane fade me_dia_chat">
+                        <ul class="me_dia_chat_ul">
+                            <li oncontextmenu="return false;">
+                                <img src="../assets/images/talk/upic.jpg" class="me_portrait_small"/>
+                                <div>
+                                    <div class="md_nnde"><span class="md_namebz chat03_name">李一李一李一李一李一李一李一李一李一李一</span><span class="md_chdate">16:00</span></div>
+                                    <div class="md_chatde">看到回复一下先！</div></div>
+                                <div class="me_dia_gf_click">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-paper-plane-o"></i>发送消息</a></li>
+                                        <li class="list-group-item"><a data-toggle="modal" data-target="#myModal_beizuc1"><i class="fa fa-edit"></i>修改备注</a></li>
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-trash-o"></i>删除好友</a></li>
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-arrows"></i>移动好友</a></li>
+                                        <li class="list-group-item"><a href="../mypage_out.html"><i class="fa fa-file-text-o"></i>查看主页</a></li>
+                                    </ul>
+                                </div>
+                                <!-- 模态框（Modal） -->
+                                <div class="modal fade myModal_beizu" id="myModal_beizuc1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_beizuc1" aria-hidden="true">
+                                    <div class="modal-dialog" style="width:210px">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel_beizuc1"><i class="fa fa-edit"></i>修改备注名称</h4>
+                                            </div>
+                                            <div class="modal-body"><input type="text" class="form-control"/></div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                                                <button type="button" class="btn btn-success">保存</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
+
+                            </li>
+                            <li><img src="../assets/images/talk/up2.jpeg" class="me_portrait_small"/>
+                                <div>
+                                    <div class="md_nnde"><span class="md_namebz chat03_name">俱乐部1群</span><span class="md_chdate">11:00</span></div>
+                                    <div class="md_chatde">张扬：你是？？？</div></div>
+                                <div class="me_dia_gf_click">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-paper-plane-o"></i>发送消息</a></li>
+                                        <li class="list-group-item"><a data-toggle="modal" data-target="#myModal_beizuc2"><i class="fa fa-edit"></i>修改备注</a></li>
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-trash-o"></i>删除好友</a></li>
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-arrows"></i>移动好友</a></li>
+                                        <li class="list-group-item"><a href="../mypage_out.html"><i class="fa fa-file-text-o"></i>查看主页</a></li>
+                                    </ul>
+                                </div>
+                                <!-- 模态框（Modal） -->
+                                <div class="modal fade myModal_beizu" id="myModal_beizuc2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_beizuc2" aria-hidden="true">
+                                    <div class="modal-dialog" style="width:210px">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel_beizuc2"><i class="fa fa-edit"></i>修改备注名称</h4>
+                                            </div>
+                                            <div class="modal-body"><input type="text" class="form-control"/></div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                                                <button type="button" class="btn btn-success">保存</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
+
+                            </li>
+                            <li><img src="../assets/images/talk/mao.jpg" class="me_portrait_small"/>
+                                <div>
+                                    <div class="md_nnde"><span class="md_namebz chat03_name">风倾城</span><span class="md_chdate">12-20</span></div>
+                                    <div class="md_chatde">晚上一起去吃饭吧</div></div>
+                                <div class="me_dia_gf_click">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-paper-plane-o"></i>发送消息</a></li>
+                                        <li class="list-group-item"><a data-toggle="modal" data-target="#myModal_beizuc3"><i class="fa fa-edit"></i>修改备注</a></li>
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-trash-o"></i>删除好友</a></li>
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-arrows"></i>移动好友</a></li>
+                                        <li class="list-group-item"><a href="../mypage_out.html"><i class="fa fa-file-text-o"></i>查看主页</a></li>
+                                    </ul>
+                                </div>
+                                <!-- 模态框（Modal） -->
+                                <div class="modal fade myModal_beizu" id="myModal_beizuc3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_beizuc3" aria-hidden="true">
+                                    <div class="modal-dialog" style="width:210px">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel_beizuc3"><i class="fa fa-edit"></i>修改备注名称</h4>
+                                            </div>
+                                            <div class="modal-body"><input type="text" class="form-control"/></div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                                                <button type="button" class="btn btn-success">保存</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="me_dia_groups" class="tab-pane fade me_dia_groups">
+                        <ul class="md_groups_ul">
+                            <li>
+                                <img src="../assets/images/talk/upic.jpg" class="me_portrait_smallgroup"/>
+                                <div>
+                                    <div class="md_nnde"><span class="md_namebz">篮球社群</span><span class="hxmd_degree">LV3</span></div>
+                                </div>
+                                <div class="me_dia_gf_click me_dia_gr">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-paper-plane-o"></i>发送群消息</a></li>
+                                        <li class="list-group-item"><a data-toggle="modal" data-target="#myModal_beizugr1"><i class="fa fa-edit"></i>修改群备注</a></li>
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-file-text-o"></i>查看群资料</a></li>
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-gear"></i>群消息设置</a></li>
+                                        <li class="list-group-item"><a href="#"><i class="fa fa-server"></i>退出该群</a></li>
+                                    </ul>
+                                </div>
+                                <!-- 模态框（Modal） -->
+                                <div class="modal fade myModal_beizu" id="myModal_beizugr1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_beizudr1" aria-hidden="true">
+                                    <div class="modal-dialog" style="width:210px">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel_beizugr1"><i class="fa fa-edit"></i>修改备注名称</h4>
+                                            </div>
+                                            <div class="modal-body"><input type="text" class="form-control" onfocus="this.focus()"/></div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                                                <button type="button" class="btn btn-success">保存</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
+
+                            </li>
+                            <li><img src="../assets/images/talk/up2.jpeg" class="me_portrait_smallgroup"/>
+                                <div>
+                                    <div class="md_nnde"><span class="md_namebz">俱乐部1群</span><span class="hxmd_degree">LV6</span></div>
+                                    <!--<div class="md_sign">我就是我，颜色不一样的烟火</div>-->
+                                </div>
+                            </li>
+                            <li><img src="../assets/images/talk/mao.jpg" class="me_portrait_smallgroup"/>
+                                <div>
+                                    <div class="md_nnde"><span class="md_namebz">大学交流群1</span><span class="hxmd_degree">LV1</span></div>
+                                    <!--<div class="md_sign">我就是我，颜色不一样的烟火</div>-->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 medi_center" style="padding-right: 15px">
+           <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 " style="padding: 0;">
+               <div class="panel panel-info media_rm_div9_pa">
+                   <div class="panel-heading media_rm_div9_pah">
+                       <h3 class="panel-title text-center" style="padding: 2px">
+                           <span style="font-weight: 600">篮球社群</span>
+                       </h3>
+                   </div>
+                   <div class="panel-body medi_center_bed">
+                       <div class="message_show mes">
+                           <ul class="message_list">
+                               <p class="text-center message_list_date">- 2016.11.16 19:07 -</p>
+                               <li class="message_l message_lm">
+                                   <a href="#">
+                                       <img src="../assets/images/talk/upic.jpg" class="me_portrait"/>
+                                       <div class="message_l_iname">【群主】李一</div>
+                                   </a>
+                                   <div>
+                                       <span class="message_l_before"></span>
+                                       <div class="me_pbo_tspan">看到回复一下！看到回复一下！看到回复一下！</div>
+                                   </div>
+                               </li>
+                               <li class="message_r  message_rm">
+                                   <a href="#">
+                                       <img src="../assets/images/talk/up4.jpg" class="me_portrait"/>
+                                       <div class="message_r_iname">【管理员】张扬</div>
+                                   </a>
+                                   <div>
+                                       <span class="message_r_before"></span>
+                                       <div class="me_pbo_trspan">恩，刚看到，怎么了恩，刚看到，怎么了恩，刚看到，怎么了恩，刚看到，怎么了恩，刚看到，怎么了恩，刚看到，怎么了</div>
+                                   </div>
+                               </li>
+                               <li class="message_l message_lm">
+                                   <a href="#"><img src="../assets/images/talk/upic.jpg" class="me_portrait"/>
+                                       <div class="message_l_iname">【群主】李一</div>
+                                   </a>
+                                   <div>
+                                       <span class="message_l_before"></span>
+                                       <div class="me_pbo_timgspan">
+                                           <img src="../assets/images/smile/se.gif" class="me_pbo_tspanimg"/>
+                                           <div>
+                                               起床困难户呀！！！起床困难户呀！！！
+                                           </div>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li class="message_r message_rm">
+                                   <a href="#"><img src="../assets/images/talk/up4.jpg" class="me_portrait"/>
+                                       <div class="message_r_iname">【管理员】张扬</div>
+                                   </a>
+                                   <div>
+                                       <span class="message_r_before"></span>
+                                       <div class="me_pbo_timgspan me_pbo_trimgspan">
+                                           <img src="../assets/images/smile/sse.gif" class="me_pbo_tspanimg"  style="width:100%;"/>
+                                           <div>
+                                           起床困难户起床困难户起床困难户起床困难户！！！
+                                           </div>
+                                       </div>
+                                   </div>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="panel-footer" style="padding-top: 5px; padding-bottom: 5px!important;">
+                       <div class="row">
+                           <div class="me_mid_fed_pression" >
+                               <div class="chat02">
+                                   <div class="chat02_title">
+                                       <a class="chat02_title_btn ctb01" href="javascript:;"></a>
+                                       <a class="chat02_title_btn ctb02" href="javascript:;" title="选择图片">
+                                           <embed width="15" height="16" flashvars="swfid=2556975203&amp;maxSumSize=50&amp;maxFileSize=50&amp;maxFileNum=1&amp;multiSelect=0&amp;uploadAPI=http%3A%2F%2Fupload.api.weibo.com%2F2%2Fmss%2Fupload.json%3Fsource%3D209678993%26tuid%3D1887188824&amp;initFun=STK.webim.ui.chatWindow.msgToolBar.upload.initFun&amp;sucFun=STK.webim.ui.chatWindow.msgToolBar.upload.sucFun&amp;errFun=STK.webim.ui.chatWindow.msgToolBar.upload.errFun&amp;beginFun=STK.webim.ui.chatWindow.msgToolBar.upload.beginFun&amp;showTipFun=STK.webim.ui.chatWindow.msgToolBar.upload.showTipFun&amp;hiddenTipFun=STK.webim.ui.chatWindow.msgToolBar.upload.hiddenTipFun&amp;areaInfo=0-16|12-16&amp;fExt=*.jpg;*.gif;*.jpeg;*.png|*&amp;fExtDec=选择图片|选择文件" data="upload.swf" wmode="transparent" bgcolor="" allowscriptaccess="always" allowfullscreen="true" scale="noScale" menu="false" type="application/x-shockwave-flash" src="http://service.weibo.com/staticjs/tools/upload.swf?v=36c9997f1313d1c4" id="swf_3140">
+                                       </a>
+                                       <a class="chat02_title_btn ctb03" href="javascript:;" title="选择附件">
+                                           <embed width="15" height="16" flashvars="swfid=2556975203&amp;maxSumSize=50&amp;maxFileSize=50&amp;maxFileNum=1&amp;multiSelect=0&amp;uploadAPI=http%3A%2F%2Fupload.api.weibo.com%2F2%2Fmss%2Fupload.json%3Fsource%3D209678993%26tuid%3D1887188824&amp;initFun=STK.webim.ui.chatWindow.msgToolBar.upload.initFun&amp;sucFun=STK.webim.ui.chatWindow.msgToolBar.upload.sucFun&amp;errFun=STK.webim.ui.chatWindow.msgToolBar.upload.errFun&amp;beginFun=STK.webim.ui.chatWindow.msgToolBar.upload.beginFun&amp;showTipFun=STK.webim.ui.chatWindow.msgToolBar.upload.showTipFun&amp;hiddenTipFun=STK.webim.ui.chatWindow.msgToolBar.upload.hiddenTipFun&amp;areaInfo=0-16|12-16&amp;fExt=*.jpg;*.gif;*.jpeg;*.png;*.pdf;*.txt;*.zip;*.doc;*.docx;*.html|*&amp;fExtDec=选择图片|选择文件" data="upload.swf" wmode="transparent" bgcolor="" allowscriptaccess="always" allowfullscreen="true" scale="noScale" menu="false" type="application/x-shockwave-flash" src="http://service.weibo.com/staticjs/tools/upload.swf?v=36c9997f1313d1c4" id="swf_31401">
+                                       </a>
+                                       <label class="chat02_title_t"><a href="#" target="_blank" style="margin-top: -5px">聊天记录</a></label>
+                                       <!--表情图-->
+                                       <div class="wl_faces_box">
+                                           <div class="wl_faces_content">
+                                               <div class="title">
+                                                   <ul>
+                                                       <li class="title_name">常用表情</li><li class="wl_faces_close"><span>&nbsp;</span></li></ul>
+                                               </div>
+                                               <div class="wl_faces_main">
+                                                   <ul>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_01.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_02.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_03.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_04.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_05.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_06.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_07.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_08.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_09.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_10.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_11.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_12.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_13.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_14.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_15.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_16.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_17.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_18.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_19.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_20.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_21.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_22.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_23.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_24.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_25.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_26.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_27.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_28.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_29.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_30.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_31.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_32.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_33.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_34.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_35.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_36.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_37.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_38.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_39.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_40.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_41.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_42.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_43.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_44.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_45.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_46.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_47.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_48.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_49.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_50.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_51.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_52.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_53.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_54.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_55.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_56.gif" /></a></li><li><a href="javascript:;"><img src="../assets/img/emo_57.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_58.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_59.gif" /></a></li>
+                                                       <li><a href="javascript:;"><img src="../assets/img/emo_60.gif" /></a></li>
+                                                   </ul>
+                                               </div>
+                                           </div>
+                                           <div class="wlf_icon">
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div><textarea class="form-control me_footinput"  id="textarea" placeholder="请输入聊天内容..." ></textarea></div>
+                           <div class="row me_mid_fed_btn"><button type="button" class="btn btn-info" style="">发&nbsp;&nbsp;送</button></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 medimore_right">
+                <div class="panel-group" id="qunfriend">
+                    <div class="panel panel-info  text-center media_rm_div3_pa" style="border-left: none">
+                        <div class="panel-heading media_rm_div3_pah">
+                            <b class="panel-title">群成员列表</b>
+                        </div>
+                        <div class="qunfriend_bottom">
+                            <!--<div class="dem_upic_hover">
+                                <div class="dem_upic_hover_div">
+                                    <a href="../mypage_out.html"><img src="../assets/images/talk/upic.jpg" class="demdy_userp_mhm"/></a>
+                                    <div class="dem_upic_hover_div_sec">
+                                        <div class="dem_upic_hover_div_secf">
+                                            <a href="../mypage_out.html">萌萌哒</a> &nbsp;&nbsp;
+                                            <i class="fa fa-pencil dem_edit" onclick="ftEdit()"></i>&nbsp;&nbsp;
+                                            <span class="hx_degree">LV2</span></div>
+
+                                        <div class="dem_upic_hover_div_sex">
+                                            男<span style="font-size: 12px;margin-left: 5px">天秤座</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <hr>
+                                <div class="dem_upic_hover_div_bot">
+                                    <button type="button" class="dem_upic_hover_div_botf" onfocus="this.blur()">加为好友</button>
+                                    <button type="button"  class="dem_upic_hover_div_bots" onfocus="this.blur()">发起私聊</button>
+                                </div>
+                            </div>-->
+
+                            <ul class="list-group media_rm_ul_lg">
+                                <li class="list-group-item media_rm_ul_lg_lif" id="media_rm_ul_lg_lif">
+                                    <img src="../assets/images/talk/upic.jpg" class="me_portrait_smalls"/>
+                                    <div class="media_rm_ul_lg_divf"><span>【群主】</span><span>李一<span>（君子玉）</span></span></div>
+                                    <div class="chat">
+                                        <ul class="list-group chat_list-group">
+                                            <li class="list-group-item"><a href="#"><i class="fa fa-paper-plane-o"></i>发起私聊</a></li>
+                                            <li class="list-group-item"><a ><i class="fa fa-edit"></i>添加好友</a></li>
+                                            <li class="list-group-item"><a href="#"><i class="fa fa-users"></i>管理成员</a></li>
+                                            <li class="list-group-item"><a href="../mypage_out.html"><i class="fa fa-file-text-o"></i>查看主页</a></li>
+                                        </ul>
+
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <img src="../assets/images/talk/up3.jpg" class="me_portrait_smalls"/>
+                                    <div class="media_rm_ul_lg_divf">
+                                        <span>【管理员】</span>
+                                        <span>张扬<span>（大长老）</span></span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <img src="../assets/images/talk/up2.jpeg" class="me_portrait_smalls"/>
+                                    <div class="media_rm_ul_lg_divf">
+                                        <span></span>
+                                        <span>李三<span>（第三方的）</span></span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <img src="../assets/images/talk/up4.jpg" class="me_portrait_smalls"/>
+                                    <div class="media_rm_ul_lg_divf">
+                                        <span></span>
+                                        <span>张扬<span>（大长老）</span></span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--页脚信息-->
+    <div class="x_footer">
+        <div class="footer_list">
+            <ul>
+                <li><a href="">网站帮助</a></li>
+                <li><a href="">版权信息</a></li>
+                <li><a href="">广告业务</a></li>
+            </ul>
+        </div>
+        <p>Copyright©  吻合  2002-2016 , All  Rights  Reserved  京ICP证041501号  海淀分局备案编号 1101082227</p>
+    </div>
+</div>
+
+<script src="../assets/js/jquery-2.2.2.min.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.cityselect.js"></script>
+<script type="text/javascript" src="../assets/js/chat.js"></script>
+<script type="text/javascript" src="../assets/js/iepng.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=45lPXDQF4aKW00LpM2xqp1qfSpd3B9ae"></script>  <!--百度地图api--->
+<script>
+    $(function () {
+        $('#myModal').modal('hide');
+
+        // 百度地图API功能   todo
+        var map = new BMap.Map("location");//地图所属容器
+        var myCity = new BMap.LocalCity();
+        myCity.get(function(result){
+            var cityName = result.name;
+            map.setCenter(cityName);
+            $('#location').html(cityName);
+//            $('#change_location').html('[<a href="#">切换城市</a>]');
+        });
+
+        $("#city_hx").citySelect({
+            url:"../assets/js/city.min.js",
+            prov:"北京",
+            city:"朝阳区"
+        });
+    });
+    var c=0;
+    $('.hx-dropdown>a').click(function () {
+        if(c==0){
+            $('.hx-menu').css('display','block');
+            c=1;
+        }else{
+            $('.hx-menu').css('display','none');
+            c=0;
+        }
+    });
+    $('.procityf').click(function () {
+        $('.hx-menu').css('display','none');
+    });
+    $('.procityt').click(function (){
+//        alert($('.prov').val());
+        $('#location').html($('.city').val());
+        $('.hx-menu').css('display','none');
+    });
+
+    $(function () { $('#collapseOne').collapse()});
+    $(function () { $('#collapseTwo').collapse('hide')});
+    $(function () { $('#collapseThree').collapse('hide')});
+    $(function () { $('#collapseFour').collapse('hide')});
+
+var m=1;
+$('#media_rm_ul_lg_lif').click(function () {
+    if(m==1){
+        $('.dem_upic_hover').css('display','block');
+        m=0;
+    }else{
+        $('.dem_upic_hover').css('display','none');
+        m=1;
+    }
+});
+    //    修改备注
+    function ftEdit(){
+        var ple=' <div  class="dem_upic_hover_div_secs">' +
+                '<input type="text" class="fte_input"/>' +
+                '<button type="button" class="fte_save" onclick="fteSave()">保存</button>' +
+                ' <button type="button" class="fte_cancel">取消</button>' +
+                ' </div>';
+        $('.dem_upic_hover_div_secf').html(ple);
+    }
+    function fteSave(){
+        var fi= $(".fte_input").val();
+        var fs= ' <a href="../mypage_out.html">'+fi+'</a> &nbsp;&nbsp; <i class="fa fa-pencil dem_edit" onclick="ftEdit()"></i>&nbsp;&nbsp;<span class="hx_degree">LV2</span>';
+        $('.dem_upic_hover_div_secf').html(fs);
+    }
+
+</script>
+</body>
+</html>
